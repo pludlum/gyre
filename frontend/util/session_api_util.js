@@ -1,4 +1,6 @@
 
+// TODO: PATCH users?
+
 export const signUp = (user) => (
   $.ajax({
     method: "POST",
