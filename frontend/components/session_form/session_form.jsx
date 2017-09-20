@@ -43,15 +43,17 @@ class SessionForm extends React.Component {
 
 
   renderErrors() {
-    return(
-      <ul className="errors-list">
-        {this.props.errors.map( (error_message, i) => (
-          <li key={`error-${i}`}>
-            {error_message}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors.length > 0) {
+      return(
+        <ul className="errors-list">
+          {this.props.errors.map( (error_message, i) => (
+            <li key={`error-${i}`}>
+              {error_message}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   render() {
@@ -59,6 +61,7 @@ class SessionForm extends React.Component {
       <div className="session-form-container">
         <Title />
         {this.renderErrors()}
+        }
         <form onSubmit={this.handleSubmit} className="session-form">
           <input type="text"
             placeholder='username'
