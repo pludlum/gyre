@@ -61,7 +61,6 @@ class SessionForm extends React.Component {
       <div className="session-form-container">
         <Title />
         {this.renderErrors()}
-        }
         <form onSubmit={this.handleSubmit} className="session-form">
           <input type="text"
             placeholder='username'
