@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
-
-import * as SessionAPIUtil from './util/session_api_util';
-
+import configureStore from './store/store';
+import Root from './components/root';
 
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
-  ReactDOM.render(<App />, root);
-});
+  const store = configureStore();
 
-window.SessionAPIUtil = SessionAPIUtil;
+  // <Testing>
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // </Testing>
+
+
+  ReactDOM.render(<Root store={store} />, root);
+});

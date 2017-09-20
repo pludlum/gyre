@@ -2,7 +2,7 @@ import { RECEIVE_ERRORS } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 
-export const SessionErrorsReducer = (errorsState = [], action) => {
+const SessionErrorsReducer = (errorsState = [], action) => {
   Object.freeze(errorsState);
   let newState = [];
 
@@ -14,3 +14,5 @@ export const SessionErrorsReducer = (errorsState = [], action) => {
       return errorsState;
   }
 };
+
+export default SessionErrorsReducer;

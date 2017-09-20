@@ -13,3 +13,121 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'futura'; sans-serif;
+}
+
+
+/* Session Nav */
+
+.signUp-signIn-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 50px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+.sesssionLinkButton {
+  background-color: blue;
+  padding-right: 20px;
+}
+
+.sesssionSignOutButton {
+
+}
+
+
+
+
+
+/* Session Form */
+
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.title {
+  font-family: futura;
+  font-style: italic;
+  text-align: center;
+  flex: 1 0 5%;
+
+  color:#313131;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.notAwesome {
+  padding-right: 20px;
+  font-size:95px;
+}
+
+.awesome {
+  font-size:140px;
+        font-weight: bold;
+        -webkit-animation:colorchange 3s infinite alternate;
+      }
+
+      @-webkit-keyframes colorchange {
+
+        0% {
+          color: #ffcc33;
+        }
+
+        25% {
+          color: #66ff33;
+        }
+
+        50% {
+          color: #3366ff;
+        }
+
+        75% {
+          color: #cc33ff;
+        }
+
+        100% {
+          color: #ff3366;
+        }
+
+      }
+
+.first {
+  padding-right: 7px;
+}
+.second {
+  animation-delay: .2s;
+}
+.third {
+  animation-delay: .4s;
+}
+.fourth {
+  animation-delay: .6s;
+}
+
+.session-form-container {
+padding-top: 150px;
+}
+
+.errors-list {
+
+}
+
+.session-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.session-input {
+
+}
