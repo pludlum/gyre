@@ -20,6 +20,11 @@
 }
 
 .errors-list {
+
+  list-style-position: inside;
+
+}
+.errors-list > * {
 	font-family: 'futura' sans-serif;
 }
 
@@ -46,6 +51,13 @@
 }
 .session-form-button {
   font-size: 18px;
+  margin-top: 20px;
+  width: 70%;
+
+}
+.demo-button {
+  height: 20px;
+  font-size: 13px;
   margin-top: 20px;
   width: 70%;
 

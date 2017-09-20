@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { sessionPOST, usersPOST } from '../../actions/session_actions';
+import { sessionPOST, usersPOST, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 
@@ -20,6 +20,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
   return {
     submitForm: user => dispatch(action(user)),
+    sessionPOST: user => dispatch(sessionPOST(user)),
     formType
   };
 };

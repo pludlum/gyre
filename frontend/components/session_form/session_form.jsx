@@ -14,12 +14,21 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
+  }
+
+  handleDemo(callback) {
+    const demoUser = {
+      username: "test3",
+      password: "password"
+    };
+    this.props.sessionPOST({user: demoUser});
   }
 
   handleSubmit(e) {
@@ -47,7 +56,7 @@ class SessionForm extends React.Component {
   renderErrors() {
     if (this.props.errors.length > 0) {
       return(
-        <ul className="errors-list">
+        <ul className="errors-list" >
           {this.props.errors.map( (error_message, i) => (
             <li key={`error-${i}`}>
               {error_message}
@@ -79,7 +88,10 @@ class SessionForm extends React.Component {
               <br/>
               <input type="submit"
                 className="session-form-button"
-                value={this.props.formType === "signin" ? "Sign In" : "Sign Up"} />
+                value={this.props.formType === "signin" ? "Sign In" :
+                  "Sign Up"} />
+              <button className="demo-button"
+                onClick={this.handleDemo}>Demo</button>
           </form>
         </div>
       </div>

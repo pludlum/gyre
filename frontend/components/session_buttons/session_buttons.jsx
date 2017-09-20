@@ -4,15 +4,15 @@ import TitleSmall from '../title/title_small';
 
 
 
-const signedOutButtons = () => (
+const signedOutButtons = (clearErrors) => (
   <nav className="signup-signin-nav">
     <div className="session-bar left"></div>
     <div className="session-bar center"></div>
     <div className="session-links">
-      <Link className="session-link-button" to="/login">
+      <Link className="session-link-button" onClick={clearErrors} to="/login">
           Sign In
       </Link>
-      <Link className="session-link-button" to="/signup">
+      <Link className="session-link-button" onClick={clearErrors} to="/signup">
           Sign Up
       </Link>
     </div>
@@ -37,11 +37,11 @@ const signedIn = (currentUser, sessionDELETE) => (
 );
 
 
-const SessionButtons = ({currentUser, sessionDELETE}) => {
+const SessionButtons = ({currentUser, sessionDELETE, clearErrors}) => {
   if (currentUser) {
     return signedIn(currentUser, sessionDELETE);
   } else {
-    return signedOutButtons();
+    return signedOutButtons(clearErrors);
   }
 };
 

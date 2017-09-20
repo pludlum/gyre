@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { sessionDELETE } from '../../actions/session_actions';
+import { sessionDELETE, clearErrors } from '../../actions/session_actions';
 import SessionButtons from './session_buttons';
 
 
@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  sessionDELETE: () => dispatch(sessionDELETE())
+  sessionDELETE: () => dispatch(sessionDELETE()),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 
