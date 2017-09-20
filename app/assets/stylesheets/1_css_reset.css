@@ -42,6 +42,11 @@ table {
 	border-spacing: 0;
 }
 
-
-
 /* Courtesy of meyerweb.com */
+
+/* -------------------- */
+body {
+	font-family: 'futura' sans-serif;
+	height: 100%;
+	width: 100%;
+}

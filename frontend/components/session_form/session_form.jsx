@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Title from '../title/title';
+
 
 
 class SessionForm extends React.Component {
@@ -59,7 +59,6 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
-        <Title />
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit} className="session-form">
           <input type="text"

@@ -8,7 +8,11 @@ const SessionErrorsReducer = (errorsState = [], action) => {
 
   switch(action.type) {
     case RECEIVE_ERRORS:
-      newState = action.errors;
+      if (action.errors === undefined) {
+        newState = ["Username already taken."];
+      } else {
+        newState = action.errors;
+      }
       return newState;
     default:
       return errorsState;
