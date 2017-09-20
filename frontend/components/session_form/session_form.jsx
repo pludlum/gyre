@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Title from '../title/title';
+
 
 
 
@@ -58,25 +60,28 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="session-form-container">
-        {this.renderErrors()}
-        <form onSubmit={this.handleSubmit} className="session-form">
-          <input type="text"
-            placeholder='username'
-            value={this.state.username}
-            onChange={this.update('username')}
-            className="session-input" />
-          <br/>
-            <input type="password"
-              placeholder='password'
-              value={this.state.password}
-              onChange={this.update('password')}
+      <div className= "session-page">
+        <Title />
+        <div className="session-form-container">
+          {this.renderErrors()}
+          <form onSubmit={this.handleSubmit} className="session-form">
+            <input type="text"
+              placeholder='username'
+              value={this.state.username}
+              onChange={this.update('username')}
               className="session-input" />
             <br/>
-            <input type="submit"
-              className="session-form-button"
-              value={this.props.formType === "signin" ? "Sign In" : "Sign Up"} />
-        </form>
+              <input type="password"
+                placeholder='password'
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="session-input" />
+              <br/>
+              <input type="submit"
+                className="session-form-button"
+                value={this.props.formType === "signin" ? "Sign In" : "Sign Up"} />
+          </form>
+        </div>
       </div>
     );
   }

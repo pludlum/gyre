@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 const Title = () => (
   <div className='title-container'>
     <p className="notAwesome">the  </p>

@@ -2,24 +2,77 @@
 
 /* Session Nav */
 
-.signUp-signIn-nav {
+.signup-signin-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  align-content: space-around;
 
   font-family: 'futura' sans-serif;
 
-
-
-  height: 50px;
+  height: 70px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
-.sesssionLinkButton {
-  font-family: 'futura' sans-serif;
-  background-color: blue;
-  padding-right: 20px;
+
+.nav-bar {
+height: 55px;
 }
 
-.sesssionSignOutButton {
+.nav-bar.left {
+
+}
+
+.nav-bar.center {
+ width: 40%;
+ margin-left: 7%;
+}
+
+.nav-bar.right {
+  display: flex;
+  align-items: center;
+}
+.nav-bar.right > * {
+  margin-right: 10px;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.session-links {
+  margin-right: 7%;
+}
+
+.session-link-button {
+  font-family: 'future' sans-serif;
+
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+
+  border-radius: 20px;
+
+  margin-right: 50px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .05);
+
+
+}
+
+.session-link-button:hover {
+  cursor: default;
+}
+
+.session-link-button:active {
+  box-shadow: none;
+}
+
+.sesssion-sign-out-button {
 
 }
