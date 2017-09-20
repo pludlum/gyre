@@ -14,7 +14,23 @@
  *= require_self
  */
 
+html {
+  height: 100%;
+}
+
 body {
   margin: auto;
   width: 90%;
+  background-image: url(http://res.cloudinary.com/dzqrzline/image/upload/c_scale,w_1954/v1505944126/background-2742844_ohciox.jpg);
+  height: 100%;
+  min-height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  background-color: white;
 }

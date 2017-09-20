@@ -14,8 +14,8 @@ import {
 
 
 const App = () => (
-  <div>
-    <header>
+  <div className="app">
+    <header className="nav-header">
       <SessionButtonsContainer />
     </header>
     <div>
