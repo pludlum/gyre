@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 
 const signedOutButtons = () => (
   <nav className="signUp-signIn-nav">
-    <Link to="/login">
-      <div className="sessionLinkButton">
+    <div >
+    <Link className="sessionLinkButton" to="/login">
         Sign In
-      </div>
     </Link>
-    <Link to="/signup">
-      <div className="sessionLinkButton">
+  </div>
+  <div>
+    <Link className="sessionLinkButton" to="/signup">
         Sign Up
-      </div>
     </Link>
+  </div>
   </nav>
 );
 
