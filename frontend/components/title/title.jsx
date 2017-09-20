@@ -11,6 +11,7 @@ const Title = () => (
       <p className="title third awesome ">r</p>
       <p className="title fourth awesome ">e</p>
     </div>
+    <p className='note'> Annotate poetry.<br/><br/>Learn, share, contribute.</p>
   </div>
 );
 

@@ -10,6 +10,7 @@
 .gyre-container {
   display: flex;
   justify-content: center;
+  align-content: space-around;
   flex-wrap: wrap;
   width: 75%;
   padding-right: 8%
@@ -23,6 +24,16 @@
   color:#313131;
   font-weight: bold;
   margin-bottom: 45px;
+}
+
+.note {
+  font-family: futura;
+  font-style: italic;
+  text-align: center;
+  font-size: 23px;
+  padding-top: 7%;
+  padding-right: 20%;
+
 }
 
 .notAwesome {
