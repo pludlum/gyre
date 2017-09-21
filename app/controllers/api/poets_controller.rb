@@ -1,5 +1,10 @@
 class Api::PoetsController < ApplicationController
 
+  def index
+    @poets = Poet.all
+    render "api/poets/index"
+  end
+
   def show
     @poet = Poet.find(params[:id])
     if @poet

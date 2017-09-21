@@ -19,16 +19,9 @@
 }
 
 .signup-signin-nav.out {
-  display: flex;
-  justify-content: space-between;
-
-  height: 80px;
-  font-family: 'futura' sans-serif;
-
 }
 
 .nav-bar {
-
 }
 
 .nav-bar.left {
@@ -39,7 +32,13 @@
   display: flex;
   justify-content: center;
   width: 90%;
+}
 
+.nav-bar.center.out {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-left: 16%;
 }
 
 .nav-bar.right {
@@ -47,6 +46,14 @@
   flex-direction: row;
   align-items: center;
   width: 10%;
+}
+
+.nav-bar.right.out {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 20%;
+  margin-right: 3%;
 }
 
 .avatar-container {
@@ -62,9 +69,9 @@
 }
 
 .avatar-container:hover {
-  height: 60px;
-  width: 60px;
-  border-radius: 60px;
+  height: 66px;
+  width: 66px;
+  border-radius: 66px;
   background: rgba(143, 188, 143, 0.5);
 }
 
@@ -75,11 +82,10 @@
   z-index: 10;
 }
 
-.session-links {
-  margin-right: 3%;
-}
+
 
 .session-link-button {
+  width: 100%;
   font-family: sans-serif;
   font-weight: bold;
   color: black;
@@ -89,7 +95,6 @@
   padding-left: 5px;
   padding-right: 5px;
 
-  margin-right: 50px;
 
 
 }

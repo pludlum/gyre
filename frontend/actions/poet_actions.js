@@ -1,7 +1,7 @@
-import { poemsGET } from '../util/poetry_api_util';
-
+import { poetsGET, poetGET } from '../util/poetry_api_util';
 
 export const RECEIVE_POET = 'RECEIVE_POET';
+export const RECEIVE_POETS = 'RECEIVE_POETS';
 
 
 export const receivePoet = (poet) => ({
@@ -9,6 +9,17 @@ export const receivePoet = (poet) => ({
   poet
 });
 
-export const fetchPoet = id => dispatch => {
-  poemsGET(id).then( (poet) => receivePoet(poet) );
-};
+export const receivePoets = (poets) => ({
+  type: RECEIVE_POETS,
+  poets
+});
+
+export const fetchPoet = id => dispatch => (
+  poetGET(id).then( (poet) => dispatch(receivePoet(poet)) )
+);
+
+export const fetchPoets = () => dispatch => (
+  poetsGET().then( poets => (
+    dispatch(receivePoets(poets))
+  ))
+);
