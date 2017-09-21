@@ -76,11 +76,11 @@
 }
 
 .session-links {
-  margin-right: 7%;
+  margin-right: 3%;
 }
 
 .session-link-button {
-  font-family: 'future' sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
   color: black;
   text-decoration: none;
@@ -88,23 +88,24 @@
   padding: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
-
 
   margin-right: 50px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .05);
 
 
 }
 
 .session-link-button:hover {
   cursor: default;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 .session-link-button:active {
-  box-shadow: none;
+
 }
 
 .sesssion-sign-out-button {
