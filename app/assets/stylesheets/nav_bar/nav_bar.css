@@ -112,6 +112,6 @@
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-.sesssion-sign-out-button:active {
+.sesssion-sign-out-button:focus {
   outline: none !important;
 }
