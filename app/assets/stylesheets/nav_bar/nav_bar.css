@@ -62,16 +62,16 @@
 }
 
 .avatar-container:hover {
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
   border-radius: 60px;
   background: rgba(143, 188, 143, 0.5);
 }
 
 .avatar {
   position: relative;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   z-index: 10;
 }
 
