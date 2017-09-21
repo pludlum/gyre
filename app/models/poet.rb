@@ -11,4 +11,9 @@
 #
 
 class Poet < ApplicationRecord
+  validates :name, uniqueness: true, presence: true
+  validates :img_url, presence: true
+  validates :banner_url, presence: true
+  validates :description, presence: true
+
 end

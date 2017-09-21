@@ -7,7 +7,9 @@ import TitleSmall from '../title/title_small';
 const signedOutButtons = (clearErrors) => (
   <nav className="signup-signin-nav out">
     <div className="session-bar left"></div>
-    <div className="session-bar center"></div>
+    <div className="session-bar center">
+      <TitleSmall />
+    </div>
     <div className="session-links">
       <Link className="session-link-button" onClick={clearErrors} to="/login">
           Sign In
