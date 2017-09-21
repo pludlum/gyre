@@ -3,8 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import Title from '../title/title';
 
 
-
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -23,12 +21,33 @@ class SessionForm extends React.Component {
     }
   }
 
-  handleDemo(callback) {
-    const demoUser = {
-      username: "test3",
-      password: "password"
-    };
-    this.props.sessionPOST({user: demoUser});
+  handleDemo(e) {
+    e.preventDefault();
+
+    let demoUsername = "shakespeare".split('');
+    let demoPassword = "tobeornottobe".split('');
+    let self = this;
+
+    // clear fields
+    this.setState({username: ""});
+    this.setState({password: ""});
+
+    demoUsername.forEach((l, i) => setTimeout( () => {
+      self.setState({username: self.state.username + l});
+    }, 70 * i));
+
+    demoPassword.forEach((l, i) => setTimeout( () => {
+      self.setState({password: self.state.password + l
+      });
+      if (i === demoPassword.length) {
+
+      }
+    }, 70 * i));
+
+    setTimeout( () => {this.props.sessionPOST({
+      user: {username: demoUsername.join(''), password: demoPassword.join('')}
+      });
+    }, 1000);
   }
 
   handleSubmit(e) {

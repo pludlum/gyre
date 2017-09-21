@@ -5,7 +5,7 @@ import TitleSmall from '../title/title_small';
 
 
 const signedOutButtons = (clearErrors) => (
-  <nav className="signup-signin-nav">
+  <nav className="signup-signin-nav out">
     <div className="session-bar left"></div>
     <div className="session-bar center"></div>
     <div className="session-links">
@@ -28,10 +28,12 @@ const signedIn = (currentUser, sessionDELETE) => (
     </div>
 
     <div className="nav-bar right">
-      <img className="avatar" src={currentUser.img_url}></img>
-      <button className="sesssion-sign-out-button"
+      <div className="avatar-container">
+        <button className="sesssion-sign-out-button"
         onClick={sessionDELETE}
-        >Sign Out</button>
+        ><img className="avatar" src={currentUser.img_url} title="Sign Out"></img>
+        </button>
+      </div>
     </div>
   </nav>
 );

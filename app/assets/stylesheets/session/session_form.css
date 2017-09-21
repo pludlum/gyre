@@ -19,14 +19,22 @@
 
 }
 
-.errors-list {
-
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: red;
+  font-family: 'futura' sans-serif;
   list-style-position: inside;
 
 }
-.errors-list > * {
-	font-family: 'futura' sans-serif;
+
+ul > * {
+  padding-bottom: 5px;
 }
+
 
 .session-form {
   display: flex;
@@ -48,12 +56,25 @@
   text-align: center;
   margin-bottom: 10px;
 
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid black;
 }
+
+.session-input:focus {
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid black;
+
+}
+
 .session-form-button {
   font-size: 18px;
   margin-top: 20px;
   width: 70%;
-
 }
 .demo-button {
   height: 20px;
