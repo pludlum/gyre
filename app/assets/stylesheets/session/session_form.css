@@ -73,13 +73,19 @@ ul > * {
 
 .session-form-button {
   font-size: 18px;
-  margin-top: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 25px;
   width: 70%;
+  background-color: black;
+  border: none;
 }
-.demo-button {
-  height: 20px;
-  font-size: 13px;
-  margin-top: 20px;
-  width: 70%;
 
+.session-form-button:hover {
+  color: black;
+  background-color: white;
+}
+
+.session-form-button:focus {
+  outline: none;
 }
