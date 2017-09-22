@@ -7,6 +7,8 @@
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 15%;
+  height: 40%;
+  background-color: white;
 }
 
 
@@ -26,7 +28,7 @@
   align-content: center;
   flex-wrap: wrap;
   color: red;
-  font-family: sans-serif;
+  font-family: 'Muli', sans-serif;
   list-style-position: inside;
 
 }

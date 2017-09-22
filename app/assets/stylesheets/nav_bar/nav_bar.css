@@ -4,7 +4,7 @@
 
 .nav-header {
   height: 95px;
-  z-index: 99999;
+  z-index: 10;
   background-color: white;
 
 
@@ -22,9 +22,9 @@
   border-bottom-width: thin;*/
 
   height: 95px;
-  font-family: 'futura' sans-serif;
+  font-family: 'Muli', sans-serif;
 
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
   overflow: visible;
 
 }
@@ -34,42 +34,55 @@
 
 
 .nav-bar.left {
-  width: 10%;
+  width: 33%;
 }
 
 .nav-bar.center {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 250px;
+  margin-left: 5%;
 }
 
-.nav-bar.center.out {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin-left: 16%;
-}
 
 .nav-bar.right {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
   align-items: center;
-  width: 10%;
+  width: 33%;
+  margin-right: 3%;
 }
 
 .nav-bar.right.out {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  width: 20%;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+  width: 33%;
   margin-right: 3%;
 }
 
-.avatar-container {
-  position: absolute;
+.avatar-animation-container {
+  height: 70px;
+  width: 70px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+}
+
+
+.avatar-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
   background-color: darkseagreen;
   height: 30px;
   width: 30px;
@@ -84,8 +97,10 @@
   background: rgba(143, 188, 143, 0.5);
 }
 
+
+
+
 .avatar {
-  position: relative;
   height: 50px;
   width: 50px;
   z-index: 10;
@@ -94,31 +109,15 @@
 
 
 .session-link-button {
-  width: 100%;
-  font-family: sans-serif;
+  width: 30%;
+  font-family: 'Muli', sans-serif;
   font-weight: bold;
   color: black;
   text-decoration: none;
 
-  padding: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-
-
-
 }
 
 .session-link-button:hover {
-  cursor: default;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-}
-
-.session-link-button:active {
 
 }
 
@@ -128,5 +127,5 @@
 }
 
 .sesssion-sign-out-button:focus {
-  outline: none !important;
+  outline: none;
 }

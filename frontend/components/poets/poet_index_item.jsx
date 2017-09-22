@@ -10,6 +10,7 @@ const PoetItem = ({poet}) => {
       <div className="index-img-container">
         <img className="poet-index-img" src={poet.img_url} />
       </div>
+      <span className="divider" ></span>
       <span className="poet-index-name">{poet.name}</span>
     </Link>
   </li>

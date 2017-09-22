@@ -21,6 +21,7 @@ class PoetIndex extends React.Component {
         <div className="poet-index-title-box">
           <span className="poet-index-title">Poets</span>
         </div>
+        <span className="divider" ></span>
         <div className="poet-index-box">
           <ul className="poet-index-list">
             {poet_item_list}

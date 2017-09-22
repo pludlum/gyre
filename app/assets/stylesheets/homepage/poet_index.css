@@ -4,7 +4,7 @@
 .poet-index-component {
   padding-top: 90px;
   width: 100%;
-
+  background-color: white;
 
   display: flex;
   flex-direction: column;
@@ -14,16 +14,20 @@
 }
 
 .poet-index-title-box {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .poet-index-title {
-  font-family: futura;
-  font-size: 60px;
-  border-bottom: solid thin
+  font-family: 'Muli', sans-serif;
+  font-size: 65px;
+
+
 }
 
+
+
 .poet-index-box {
+  padding-top: 5px;
   width: 100%;
 }
 
@@ -41,8 +45,8 @@
 /* --- Poet index items ---- */
 
 .poet-index-item {
-  padding: 30px;
-  width: 20%;
+  padding: 40px;
+  width: 25%;
 
 }
 
@@ -57,6 +61,11 @@
 
 }
 
+
+/*.poet-item-link:hover > .divider {
+  visibility: visible;
+}*/
+
 .index-img-container {
   height: 25vh;
   width: 25vh;
@@ -65,6 +74,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 25vh;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+
 }
 
 .poet-index-img {
@@ -73,7 +85,17 @@
 
 .poet-index-name {
   padding-top: 10px;
-  font-family: futura;
+  font-family: 'Muli', sans-serif;
   color: black;
   text-align: center;
+}
+
+
+.divider {
+  /*visibility: hidden;*/
+
+  width: 60%;
+  margin-top: 20px;
+  border-bottom: solid 1px;
+  margin-bottom: 10px;
 }
