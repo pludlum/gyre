@@ -2,7 +2,7 @@ class Api::PoemsController < ApplicationController
 
 
   def index
-    @poems = Poem.where(author_id: :poet_id).limit(5)
+    @poems = Poem.where(author_id: params[:poet_id]).limit(5)
   end
 
   def show
@@ -13,6 +13,5 @@ class Api::PoemsController < ApplicationController
       render json: ["Poem not found."], status: 404
     end
   end
-
 
 end
