@@ -44,8 +44,6 @@ def create_poets
   }
   poets.push(poe)
 
-
-
   poets.each do |poet|
     Poet.create(poet)
   end
@@ -53,7 +51,7 @@ end
 
 
 def add_poems
-
+  poet_surnames = %w[shakespeare blake dickinson poe]
 end
 
 
