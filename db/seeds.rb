@@ -29,7 +29,7 @@ def create_poets
 
   dickinson = {
     name: "Emily Dickinson",
-    img_url: "https://cloudinary.com/console/media_library#/dialog/image/upload/Black-white_photograph_of_Emily_Dickinson2_rahefy",
+    img_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506035096/Black-white_photograph_of_Emily_Dickinson2_rahefy.png",
     banner_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506035259/marthas-988120_1920_puviat.jpg",
     description: "Dickinson was born in Amherst, Massachusetts. Although part of a prominent family with strong ties to its community, Dickinson lived much of her life in reclusive isolation. After studying at the Amherst Academy for seven years in her youth, she briefly attended the Mount Holyoke Female Seminary before returning to her family's house in Amherst. Considered an eccentric by locals, she developed a noted penchant for white clothing and became known for her reluctance to greet guests or, later in life, to even leave her bedroom. Dickinson never married, and most friendships between her and others depended entirely upon correspondence. Dickinson was a recluse for the later years of her life."
   }
@@ -58,5 +58,5 @@ end
 
 
 
-
+User.create(username:"shakespeare", password:"tobeornottobe")
 create_poets
