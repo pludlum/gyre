@@ -22,15 +22,17 @@ class PoetDetail extends React.Component {
         <div className="banner-container">
           <div className="banner-img-container" >
             <img className="banner-img" src={this.props.poet.banner_url} />
-            <p className="banner-name">{lastName}</p>
           </div>
         </div>
-
 
         <div className="poet-portrait-container">
           <div className="poet-portrait-frame">
             <img className="poet-portait" src={this.props.poet.img_url} ></img>
           </div>
+        </div>
+
+        <div className="banner-name-container" >
+          <p className="banner-name">{lastName}</p>
         </div>
 
         <div className="poet-description-container">

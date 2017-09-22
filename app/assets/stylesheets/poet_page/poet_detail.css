@@ -38,16 +38,27 @@
   width: 130%;
 }
 
+.banner-name-container {
+  position: relative;
+  height: 10%;
+  width: 30%;
+
+  margin-left: 4%;
+}
+
+
 .banner-name {
+
   position: absolute;
-  z-index: 50;
+  z-index: 55;
   left: 5%;
-  top: 50%;
+  top: -200%;
 
   font-family: 'Muli', sans-serif;
-  font-size: 120px;
+  font-size: 14vh;
   font-weight: bold;
   color: white;
+
 }
 
 
@@ -99,7 +110,7 @@
   font-size: 30px;
   font-weight: bold;
 
-  padding-top: 10%;
+
   padding-bottom: 5%;
 }
 
