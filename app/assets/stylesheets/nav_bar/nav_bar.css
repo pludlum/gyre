@@ -88,6 +88,10 @@
   width: 30px;
   border-radius: 35px;
   transition: 0.5s;
+
+  z-index: 20;
+
+
 }
 
 .avatar-container:hover {
@@ -103,7 +107,7 @@
 .avatar {
   height: 50px;
   width: 50px;
-  z-index: 10;
+  z-index: 30;
 }
 
 

@@ -1,0 +1,111 @@
+
+.poet_detail_container {
+  height: 100%;
+}
+
+.poet-detail-body {
+
+}
+
+.banner-img-container {
+  position: relative;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Opaque filter over image -- thanks to stack overflow:  */
+/* https://stackoverflow.com/questions/17859993/basic-css-how-to-overlay-a-div-with-semi-transparent-div-on-top */
+/*   -----V----  */
+.banner-img-container::after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+
+.banner-img {
+  padding-top: 50vh;
+  width: 130%;
+}
+
+.banner-name {
+  position: absolute;
+  z-index: 50;
+  left: 5%;
+  top: 50%;
+
+  font-family: 'Muli', sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+}
+
+
+.poet-portrait-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+
+
+}
+
+.poet-portrait-frame {
+  position: absolute;
+
+  height: 22vh;
+  width: 22vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* circular borders are pixaled --- fix? */
+  border-radius: 22vh;
+  border: solid medium white;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+
+  z-index: 55;
+}
+
+.poet-portait {
+  width: 108%;
+}
+
+
+.poet-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 800px;
+  margin-left: 8%;
+}
+
+.poet-name {
+  font-family: 'Muli', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.poet-description {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+
+}

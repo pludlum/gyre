@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {fetchPoets, fetchPoet} from '../../actions/poet_actions';
+import {fetchPoets} from '../../actions/poet_actions';
 import PoetIndex from './poet_index';
 
 
@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPoets: () =>  dispatch(fetchPoets()),
-  fetchPoet: (id) => dispatch(fetchPoet(id))
 });
 
 

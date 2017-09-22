@@ -62,6 +62,8 @@
 }
 
 
+
+
 /*.poet-item-link:hover > .divider {
   visibility: visible;
 }*/
@@ -76,8 +78,9 @@
   border-radius: 25vh;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 
-
 }
+
+
 
 .poet-index-img {
   width: 108%;
@@ -93,6 +96,7 @@
 
 .divider {
   /*visibility: hidden;*/
+  color: black;
 
   width: 60%;
   margin-top: 20px;
