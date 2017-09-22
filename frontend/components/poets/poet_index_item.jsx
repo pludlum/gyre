@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const PoetItem = ({poet}) => {
-  console.log(poet);
+
   return (
   <li className="poet-index-item">
     <Link className="poet-item-link" to={`/poets/${poet.id}`}>

@@ -17,9 +17,9 @@ class Poem < ApplicationRecord
   validates :title, :author, :author_id, :body, presence: true
 
   belongs_to :poet,
-    primary_key: :id,
-    foreign_key: :author_id,
-    class_name: :Poet
+             primary_key: :id,
+             foreign_key: :author_id,
+             class_name: :Poet
 
 
 end

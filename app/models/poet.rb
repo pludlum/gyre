@@ -18,8 +18,8 @@ class Poet < ApplicationRecord
   validates :description, presence: true
 
   has_many :poems,
-    primary_key: :id,
-    foreign_key: :author_id,
-    class_name: :Poem
+           primary_key: :id,
+           foreign_key: :author_id,
+           class_name: :Poem
 
 end
