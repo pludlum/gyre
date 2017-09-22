@@ -32,5 +32,10 @@ body {
 
 .app {
   height: 100%;
+}
+
+
+.component-container {
+  margin-top: 2%;
   background-color: white;
 }

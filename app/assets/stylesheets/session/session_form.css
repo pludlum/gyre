@@ -19,20 +19,20 @@
 
 }
 
-ul {
+.errors-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
   color: red;
-  font-family: 'futura' sans-serif;
+  font-family: sans-serif;
   list-style-position: inside;
 
 }
 
-ul > * {
-  padding-bottom: 5px;
+.errors-list > * {
+  padding-bottom: 10px;
 }
 
 

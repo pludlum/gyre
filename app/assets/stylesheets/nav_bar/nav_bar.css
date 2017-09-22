@@ -4,7 +4,11 @@
 
 .nav-header {
   height: 95px;
-  z-index:20;
+  z-index: 99999;
+  background-color: white;
+
+
+  overflow: visible;
 }
 
 .signup-signin-nav {
@@ -12,17 +16,22 @@
   justify-content: space-between;
   align-items: center;
 
+  /*box-sizing: border-box;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: thin;*/
+
   height: 95px;
   font-family: 'futura' sans-serif;
 
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  overflow: visible;
+
 }
 
 .signup-signin-nav.out {
 }
 
-.nav-bar {
-}
 
 .nav-bar.left {
   width: 10%;

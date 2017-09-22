@@ -1,0 +1,79 @@
+
+/* --- Poet index containers ---- */
+
+.poet-index-component {
+  padding-top: 90px;
+  width: 100%;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.poet-index-title-box {
+  padding-bottom: 60px;
+}
+
+.poet-index-title {
+  font-family: futura;
+  font-size: 60px;
+  border-bottom: solid thin
+}
+
+.poet-index-box {
+  width: 100%;
+}
+
+.poet-index-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+/* --- Poet index items ---- */
+
+.poet-index-item {
+  padding: 30px;
+  width: 20%;
+
+}
+
+.poet-item-link {
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.index-img-container {
+  height: 25vh;
+  width: 25vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25vh;
+}
+
+.poet-index-img {
+  width: 108%;
+}
+
+.poet-index-name {
+  padding-top: 10px;
+  font-family: futura;
+  color: black;
+  text-align: center;
+}
