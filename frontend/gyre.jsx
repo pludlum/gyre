@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { fetchPoet, fetchPoets } from './actions/poet_actions';
-import {poetsGET} from './util/poetry_api_util';
+import { fetchPoem, fetchPoems } from './actions/poem_actions';
+import {poemsGET, poemGET} from './util/poetry_api_util';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store} />, root);
 });
 
-window.poetsGET = poetsGET;
-window.fetchPoet = fetchPoet;
-window.fetchPoets = fetchPoets;
+window.poemsGET = poemsGET;
+window.poemGET = poemGET;
+window.fetchPoem = fetchPoem;
+window.fetchPoems = fetchPoems;

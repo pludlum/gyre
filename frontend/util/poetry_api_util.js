@@ -12,3 +12,17 @@ export const poetsGET = () => (
     url: `api/poets`
   })
 );
+
+export const poemGET = (id) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/poems/${id}`
+  })
+);
+
+export const poemsGET = (id) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/poets/${id}/poems`
+  })
+);
