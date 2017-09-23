@@ -7,10 +7,10 @@ const TitleSmall = () => (
     <div className='title-container small'>
       <p className="notAwesome small">the  </p>
       <div className='gyre-container small'>
-        <p className="title first awesome small">G</p>
-        <p className="title second awesome small">y</p>
-        <p className="title third awesome small">r</p>
-        <p className="title fourth awesome small">e</p>
+        <p className="title first small">G</p>
+        <p className="title second small">y</p>
+        <p className="title third small">r</p>
+        <p className="title fourth small">e</p>
       </div>
     </div>
   </Link>

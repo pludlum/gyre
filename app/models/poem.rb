@@ -21,5 +21,23 @@ class Poem < ApplicationRecord
              foreign_key: :author_id,
              class_name: :Poet
 
+  after_initialize :ensure_author_id, :ensure_body
+
+
+  def ensure_author_id
+    puts @author
+    poet = Poet.find_by(name: self.author)
+    self.author_id ||= poet.id
+  end
+
+  def ensure_body
+    new_body = ""
+    self.lines.each do |line|
+      new_body += line + "\n"
+    end
+
+    self.body ||= new_body
+  end
+
 
 end

@@ -3,6 +3,7 @@ import SessionButtonsContainer from './session_buttons/session_buttons_container
 import SessionFormContainer from './session_form/session_form_container';
 import PoetIndexContainer from './poets/poets_index_container';
 import PoetDetailContainer from './poets/poet_detail_container';
+import PoemDetailContainer from './poems/poem_detail_container';
 import AuthRoute from '../util/route_util';
 
 
@@ -28,7 +29,8 @@ const App = () => (
         <Route exact path="/" component={PoetIndexContainer} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <Route path="/poets/:poetId" component={PoetDetailContainer} />
+        <Route exact path="/poets/:poetId" component={PoetDetailContainer} />
+        <Route path="/poets/:poetId/poems/:poemId" component={PoemDetailContainer} />
       </Switch>
     </div>
 

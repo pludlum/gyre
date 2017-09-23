@@ -50,6 +50,17 @@ body {
 
 }
 
+/*  DOES NOT WORK YET  */
+
+.component-container > * {
+  height: 110%;
+
+}
+
+.component-container > .session-page {
+  height: auto;
+}
+
 
 /*  RESEARCH SCROLL BAR TRICKS  */
 

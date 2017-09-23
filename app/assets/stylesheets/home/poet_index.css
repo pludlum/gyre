@@ -69,14 +69,14 @@
 }*/
 
 .index-img-container {
-  height: 25vh;
-  width: 25vh;
+  height: 18vw;
+  width: 18vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border-radius: 25vh;
+  border-radius: 18vw;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 
 }

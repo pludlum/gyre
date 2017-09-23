@@ -43,13 +43,13 @@
   justify-content: center;
   flex-wrap: wrap;
   align-content: space-between;
-
+  margin-top: 20%;
 }
-
+/*
 .session-form > * {
   width: 100%
 
-}
+}*/
 
 .session-input {
   font-family: 'futura' sans-serif;

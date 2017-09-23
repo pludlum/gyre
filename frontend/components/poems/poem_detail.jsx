@@ -1,20 +1,23 @@
 import React from 'react';
-import PoemIndexContainer from '../poems/poem_index_container';
+import Poem from './poem';
 
 
-class PoetDetail extends React.Component {
+
+class PoemDetail extends React.Component {
   constructor(props) {
     super(props);
 
   }
 
   componentDidMount() {
-    this.props.fetchPoet(this.props.match.params.poetId);
+    this.props.fetchPoet(this.props.poetId);
+    this.props.fetchPoem(this.props.poemId);
   }
 
   render() {
 
-    if (this.props.poet === undefined) return null;
+    if (this.props.poem === undefined) return null;
+
     let nameArray = this.props.poet.name.split(' ');
     let lastName = nameArray[nameArray.length-1];
 
@@ -36,13 +39,10 @@ class PoetDetail extends React.Component {
           <p className="banner-name">{lastName}</p>
         </div>
 
-        <div className="poet-description-container">
-          <h3 className="poet-name">{this.props.poet.name}</h3>
-          <p className="poet-description" >{this.props.poet.description}</p>
+        <div className="poet-description-container poem">
+          <h3 className="poet-name poem">{this.props.poem.title}</h3>
+          <Poem poemBody={this.props.poem.body} />
         </div>
-
-        <PoemIndexContainer poetId={this.props.poetId} />
-
       </div>
     );
   }
@@ -51,4 +51,4 @@ class PoetDetail extends React.Component {
 
 
 
-export default PoetDetail;
+export default PoemDetail;

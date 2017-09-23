@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   handleDemo(e) {
     e.preventDefault();
 
-    let demoUsername = "shakespeare".split('');
+    let demoUsername = "anonymous".split('');
     let demoPassword = "tobeornottobe".split('');
     let self = this;
 
@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
                 value={this.props.formType === "signin" ? "Sign In" :
                   "Sign Up"} />
               <button className="session-form-button"
-                onClick={this.handleDemo}>Demo</button>
+                onClick={this.handleDemo}>Guest</button>
           </form>
         </div>
       </div>

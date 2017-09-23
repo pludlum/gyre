@@ -9,7 +9,7 @@
 
 .banner-img-container {
   position: relative;
-  height: 30vh;
+  height: 20vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -34,8 +34,8 @@
 
 
 .banner-img {
-  padding-top: 50vh;
-  width: 130%;
+  padding-top: 30vh;
+  width: 100%;
 }
 
 .banner-name-container {
@@ -52,10 +52,10 @@
   position: absolute;
   z-index: 55;
   left: 5%;
-  top: -200%;
+  top: -170%;
 
   font-family: 'Muli', sans-serif;
-  font-size: 12vh;
+  font-size: 6vw;
   font-weight: bold;
   color: white;
 
@@ -75,8 +75,8 @@
 .poet-portrait-frame {
   position: absolute;
 
-  height: 22vh;
-  width: 22vh;
+  height: 18vw;
+  width: 18vw;
   overflow: hidden;
 
   display: flex;
@@ -84,7 +84,7 @@
   align-items: center;
 
   /* circular borders are pixaled --- fix? */
-  border-radius: 22vh;
+  border-radius: 18vw;
   border: solid medium white;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 
@@ -118,5 +118,5 @@
   font-family: 'Muli', sans-serif;
   font-size: 18px;
   line-height: 130%;
-
+  white-space: pre-wrap;
 }
