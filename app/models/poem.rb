@@ -16,13 +16,21 @@
 class Poem < ApplicationRecord
   validates :title, :author, :author_id, :body, presence: true
 
+
+  #  ----- Associations -------
+
+
   belongs_to :poet,
              primary_key: :id,
              foreign_key: :author_id,
              class_name: :Poet
 
-  after_initialize :ensure_author_id, :ensure_body
+  has_many :annotations
 
+
+
+
+  after_initialize :ensure_author_id, :ensure_body
 
   def ensure_author_id
     poet = Poet.find_by(name: self.author)

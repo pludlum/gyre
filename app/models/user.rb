@@ -15,6 +15,12 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
+  #  ----- Associations -------
+
+  has_many :annotations
+
+    # ----- Methods -------
+
   after_initialize :ensure_session_token, :ensure_avatar
   attr_reader :password
 
