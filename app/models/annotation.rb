@@ -29,9 +29,9 @@ class Annotation < ApplicationRecord
 
   belongs_to :user
 
-  belongs_to :poet,
-            through: :poem,
-            source: :poet
+  has_one :poet,
+          through: :poem,
+          source: :poet
 
   # ----- Methods -------
 
