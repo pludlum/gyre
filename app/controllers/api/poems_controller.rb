@@ -15,11 +15,13 @@ class Api::PoemsController < ApplicationController
   end
 
   # ------- #create for potentially seeding from poetry.db -------
-
   def create
     @poem = Poem.new(poem_params)
     render json: ["Poem creation error"], status: 422 unless @poem.save
   end
+  # -------------------------------------------------------------
+
+  private
 
   def poem_params
     params.require(:poem).permit(

@@ -24,6 +24,10 @@ class Poet < ApplicationRecord
            foreign_key: :author_id,
            class_name: :Poem
 
+  has_many :annotations,
+           through: :poems,
+           source: :annotations
+
   # ----- Methods -------
 
 end
