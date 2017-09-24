@@ -2,7 +2,7 @@ class Api::PoemsController < ApplicationController
 
 
   def index
-    @poems = Poem.where(author_id: params[:poet_id]).limit(5)
+    @poems = Poem.where(author_id: params[:poet_id])
   end
 
   def show
@@ -18,17 +18,17 @@ class Api::PoemsController < ApplicationController
 
   def create
     @poem = Poem.new(poem_params)
-    render json: ["Poem creation error"], status: 422 unless @poem.create
+    render json: ["Poem creation error"], status: 422 unless @poem.save
   end
 
   def poem_params
     params.require(:poem).permit(
       :title,
-      :lines,
       :line_count,
       :author,
       :body,
-      :author_id
+      :author_id,
+      lines: [],
     )
   end
 

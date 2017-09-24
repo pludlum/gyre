@@ -25,7 +25,6 @@ class Poem < ApplicationRecord
 
 
   def ensure_author_id
-    puts @author
     poet = Poet.find_by(name: self.author)
     self.author_id ||= poet.id
   end

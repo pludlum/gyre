@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :poets, only: %i[show index] do
       resources :poems, only: %i[index]
     end
-    resources :poems, only: %i[show]
+    resources :poems, only: %i[show create]
   end
 
 end
