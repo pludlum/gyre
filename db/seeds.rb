@@ -9,7 +9,6 @@ Poem.delete_all
 User.create(username: "anonymous", password:  "tobeornottobe")
 
 
-
 def create_poets
   poets = []
 
