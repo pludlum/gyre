@@ -29,7 +29,7 @@ class Annotation < ApplicationRecord
 
   belongs_to :user
 
-  belong_to :poet,
+  belongs_to :poet,
             through: :poem,
             source: :poet
 
