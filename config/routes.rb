@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :poems, only: %i[index]
     end
     resources :poems, only: %i[show create]
+    resources :annotations, only: %i[show create update destroy]
   end
 
 end

@@ -25,20 +25,21 @@ class Api::AnnotationsController < ApplicationController
     @annotation = Annotation.find(params[:id])
     if @annotation && @annotation.update_attributes(annotation_params)
       @annotation.save
-      render "api/annotation/show"
+      render "api/annotations/show"
     else
       render json: ["Annotation not found"], status: 404
     end
   end
 
-  def delete
+  def destroy
     @annotation = Annotation.find(params[:id])
     @annotation.delete
+    render "api/annotations/show"
   end
 
   private
 
-  def annotaion_params
+  def annotation_params
     params.require(:annotation).permit(
       :start_idx,
       :end_idx,
