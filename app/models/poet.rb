@@ -17,9 +17,13 @@ class Poet < ApplicationRecord
   validates :banner_url, presence: true
   validates :description, presence: true
 
+  #  ----- Associations -------
+
   has_many :poems,
            primary_key: :id,
            foreign_key: :author_id,
            class_name: :Poem
+
+  # ----- Methods -------
 
 end

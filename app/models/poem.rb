@@ -19,7 +19,6 @@ class Poem < ApplicationRecord
 
   #  ----- Associations -------
 
-
   belongs_to :poet,
              primary_key: :id,
              foreign_key: :author_id,
@@ -28,7 +27,7 @@ class Poem < ApplicationRecord
   has_many :annotations
 
 
-
+  # ----- Methods -------
 
   after_initialize :ensure_author_id, :ensure_body
 

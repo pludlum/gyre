@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   has_many :annotations
 
-    # ----- Methods -------
+  # ----- Methods -------
 
   after_initialize :ensure_session_token, :ensure_avatar
   attr_reader :password
