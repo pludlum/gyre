@@ -94,12 +94,16 @@
 
 }
 
+
+/* --- Removed ---- */
+/* --- Spacing bugs and avatars no longer have one color scheme ---  */
+/*
 .avatar-container:hover {
   height: 66px;
   width: 66px;
   border-radius: 66px;
   background: rgba(143, 188, 143, 0.5);
-}
+}*/
 
 
 

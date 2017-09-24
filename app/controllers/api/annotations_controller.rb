@@ -19,6 +19,12 @@ class Api::AnnotationsController < ApplicationController
   end
 
   def annotaion_params
-    params.require(:annotation)
+    params.require(:annotation).permit(
+      :start_idx,
+      :end_idx,
+      :body,
+      :poem_id,
+      :source_text
+    )
   end
 end
