@@ -2,6 +2,10 @@ class Api::AnnotationsController < ApplicationController
 
   before_action only:
 
+  def index
+    @annotations = Annotation.all.where(poem_id: params[:poem_id])
+  end
+
   def create
     @annotation = Annotation.new(annotation_params)
     @annotation.user_id = current_user.id

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resource :session, only: %i[create destroy]
     resources :users, only: %i[create]
     resources :poets, only: %i[show index] do
-      resources :poems, only: %i[index]
+      resources :poems, only: %i[index] do
+        resources :annotations, only: %i[index]
+      end
     end
     resources :poems, only: %i[show create]
     resources :annotations, only: %i[show create update destroy]

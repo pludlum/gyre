@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { fetchPoem, fetchPoems } from './actions/poem_actions';
-import {poemsGET, poemGET} from './util/poetry_api_util';
+import * as annoAPIUtil from './util/annotations_api_util';
+import * as annoActions from './actions/annotation_actions.js';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store} />, root);
 });
 
-window.poemsGET = poemsGET;
-window.poemGET = poemGET;
-window.fetchPoem = fetchPoem;
-window.fetchPoems = fetchPoems;
+window.annosGET = annoAPIUtil.annosGET;
+
+window.fetchAnnotations = annoActions.fetchAnnotations;
+window.fetchAnnotation = annoActions.fetchAnnotation;
+window.createAnnotation = annoActions.createAnnotation;
+window.destroyAnnotation = annoActions.destroyAnnotation;
+window.updateAnnotation = annoActions.updateAnnotation;
