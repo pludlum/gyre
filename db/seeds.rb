@@ -1,14 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db =>seed command (or created alongside the database with db =>setup).
-#
-# Examples =>
-#
-#   movies = Movie.create([{ name => 'Star Wars' }, { name => 'Lord of the Rings' }])
-#   Character.create(name => 'Luke', movie => movies.first)
+
+
 
 User.delete_all
-Poets.delete_all
-Poems.delete_all
+Poet.delete_all
+Poem.delete_all
 
 
 User.create(username: "anonymous", password:  "tobeornottobe")
@@ -20,16 +15,16 @@ def create_poets
 
   shakespeare = {
     name: "William Shakespeare",
-    img_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506015246/shakespeare-67698_640_guxmbj.jpg",
-    banner_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506015592/vintage-1721959_1920_lk2fw9.jpg",
+    img_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506015246/shakespeare-67698_640_guxmbj.jpg",
+    banner_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506015592/vintage-1721959_1920_lk2fw9.jpg",
     description: "William Shakespeare was an English poet, playwright, and actor, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet, and the 'Bard of Avon'. His extant works, including collaborations, consist of approximately 38 plays, 154 sonnets, two long narrative poems, and a few other verses, some of uncertain authorship. His plays have been translated into every major living language and are performed more often than those of any other playwright."
   }
   poets.push(shakespeare)
 
   blake = {
     name: "William Blake",
-    img_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506032476/William_Blake_by_Thomas_Phillips_qi0gwn.jpg",
-    banner_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506032581/Europe_a_Prophecy__copy_D__object_1__Bentley_1__Erdman_i__Keynes_i__British_Museum_txmvg0.jpg",
+    img_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506032476/William_Blake_by_Thomas_Phillips_qi0gwn.jpg",
+    banner_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506032581/Europe_a_Prophecy__copy_D__object_1__Bentley_1__Erdman_i__Keynes_i__British_Museum_txmvg0.jpg",
     description: "William Blake was an English poet, painter, and printmaker. Largely unrecognised during his lifetime, Blake is now considered a seminal figure in the history of the poetry and visual arts of the Romantic Age. His so-called prophetic works were said by 20th century critic Northrop Frye to form \"what is in proportion to its merits the least read body of poetry in the English language\". His visual artistry led 21st-century critic Jonathan Jones to proclaim him \"far and away the greatest artist Britain has ever produced\". Although he lived in London his entire life (except for three years spent in Felpham), he produced a diverse and symbolically rich œuvre, which embraced the imagination as \"the body of God\" or \"human existence itself\"."
   }
   poets.push(blake)
@@ -37,8 +32,8 @@ def create_poets
 
   dickinson = {
     name: "Emily Dickinson",
-    img_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506035096/Black-white_photograph_of_Emily_Dickinson2_rahefy.png",
-    banner_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506035259/marthas-988120_1920_puviat.jpg",
+    img_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506035096/Black-white_photograph_of_Emily_Dickinson2_rahefy.png",
+    banner_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506111551/Emily_Dickinson_Homestead__Amherst__Massachusetts__from_left_ou4fru.jpg",
     description: "Dickinson was born in Amherst, Massachusetts. Although part of a prominent family with strong ties to its community, Dickinson lived much of her life in reclusive isolation. After studying at the Amherst Academy for seven years in her youth, she briefly attended the Mount Holyoke Female Seminary before returning to her family's house in Amherst. Considered an eccentric by locals, she developed a noted penchant for white clothing and became known for her reluctance to greet guests or, later in life, to even leave her bedroom. Dickinson never married, and most friendships between her and others depended entirely upon correspondence. Dickinson was a recluse for the later years of her life."
   }
   poets.push(dickinson)
@@ -46,8 +41,8 @@ def create_poets
 
   poe = {
     name: "Edgar Allan Poe",
-    img_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506036188/portrait-62996_qdufdy.jpg",
-    banner_url: "http =>//res.cloudinary.com/dzqrzline/image/upload/v1506036185/bird-2071185_1920_wiyiev.jpg",
+    img_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506036188/portrait-62996_qdufdy.jpg",
+    banner_url: "http://res.cloudinary.com/dzqrzline/image/upload/v1506036185/bird-2071185_1920_wiyiev.jpg",
     description: "Edgar Allen Poe was an American writer, editor, and literary critic. Poe is best known for his poetry and short stories, particularly his tales of mystery and the macabre. He is widely regarded as a central figure of Romanticism in the United States and American literature as a whole, and he was one of the country's earliest practitioners of the short story. Poe is generally considered the inventor of the detective fiction genre and is further credited with contributing to the emerging genre of science fiction. He was the first well-known American writer to try to earn a living through writing alone, resulting in a financially difficult life and career."
   }
   poets.push(poe)
@@ -76,7 +71,7 @@ blake_poems = [
       "In every cry of every man,",
       "  In every infant's cry of fear,",
       "In every voice, in every ban,",
-      "  The mind-forged manacles I hear =>",
+      "  The mind-forged manacles I hear:",
       "",
       "How the chimney-sweeper's cry",
       "  Every blackening church appalls,",
@@ -121,7 +116,7 @@ blake_poems = [
       "",
       "The gods of the earth and sea",
       "Sought through nature to find this tree,",
-      "But their search was all in vain =>",
+      "But their search was all in vain:",
       "There grows one in the human Brain."
     ],
     "line_count" => "24"
@@ -130,9 +125,9 @@ blake_poems = [
     "title" => "A POISON TREE",
     "author" => "William Blake",
     "lines" => [
-      "I was angry with my friend =>",
+      "I was angry with my friend:",
       "I told my wrath, my wrath did end.",
-      "I was angry with my foe =>",
+      "I was angry with my foe:",
       "I told it not, my wrath did grow.",
       "",
       "And I watered it in fears",
@@ -157,25 +152,25 @@ blake_poems = [
     "author" => "William Blake",
     "lines" => [
       "Does the Eagle know what is in the pit?",
-      "Or wilt thou go ask the Mole =>",
+      "Or wilt thou go ask the Mole:",
       "Can Wisdom be put in a silver rod?",
       "Or Love in a golden bowl?"
     ],
     "line_count" => "4"
   },
   {
-    "title" => "Songs of Innocence => Introduction",
+    "title" => "Songs of Innocence: Introduction",
     "author" => "William Blake",
     "lines" => [
       "Piping down the valleys wild,",
       "  Piping songs of pleasant glee,",
       "On a cloud I saw a child,",
-      "  And he laughing said to me =>",
+      "  And he laughing said to me:",
       "",
       "\"Pipe a song about a Lamb!\"",
       "  So I piped with merry cheer.",
       "\"Piper, pipe that song again\"",
-      "  So I piped => he wept to hear.",
+      "  So I piped: he wept to hear.",
       "",
       "\"Drop thy pipe, thy happy pipe",
       "  Sing thy songs of happy cheer!\"",
@@ -221,7 +216,7 @@ blake_poems = [
       "On the echoing Green.\"",
       "",
       "Till the little ones, weary,",
-      "No more can be merry =>",
+      "No more can be merry:",
       "The sun does descend,",
       "And our sports have an end.",
       "Round the laps of their mothers",
@@ -249,7 +244,7 @@ blake_poems = [
       "  Dost thou know who made thee?",
       "",
       "  Little Lamb, I'll tell thee",
-      "  Little Lamb, I'll tell thee =>",
+      "  Little Lamb, I'll tell thee:",
       "He is called by thy name,",
       "For He calls Himself a Lamb",
       "He is meek, and He is mild,",
@@ -273,9 +268,9 @@ blake_poems = [
       "My mother taught me underneath a tree,",
       "  And, sitting down before the heat of day,",
       "She took me on her lap and kissed me,",
-      "  And, pointed to the east, began to say =>",
+      "  And, pointed to the east, began to say:",
       "",
-      "\"Look on the rising sun => there God does live,",
+      "\"Look on the rising sun: there God does live,",
       "  And gives His light, and gives His heat away,",
       "And flowers and trees and beasts and men receive",
       "  Comfort in morning, joy in the noonday.",
@@ -352,7 +347,7 @@ blake_poems = [
       "",
       "And so Tom awoke, and we rose in the dark,",
       "And got with our bags and our brushes to work.",
-      "Though the morning was cold, Tom was happy and warm =>",
+      "Though the morning was cold, Tom was happy and warm:",
       "So, if all do their duty, they need not fear harm."
     ],
     "line_count" => "24"
@@ -404,7 +399,7 @@ blake_poems = [
       "With their sweet round mouths sing \"Ha, ha he!\"",
       "",
       "When the painted birds laugh in the shade,",
-      "Where our table with cherries and nuts is spread =>",
+      "Where our table with cherries and nuts is spread:",
       "Come live, and be merry, and join with me,",
       "To sing the sweet chorus of \"Ha, ha, he!\""
     ],
@@ -442,7 +437,7 @@ blake_poems = [
       "Sweet babe, in thy face",
       "Holy image I can trace",
       "Sweet babe, once like thee",
-      "Thy Maker lay, and wept for me =>",
+      "Thy Maker lay, and wept for me:",
       "",
       "Wept for me, for thee, for all,",
       "When He was an infant small.",
@@ -477,7 +472,7 @@ blake_poems = [
       "",
       "Then every man, of every clime,",
       "  That prays in his distress,",
-      "Prays to the human form divine =>",
+      "Prays to the human form divine:",
       "  Love, Mercy, Pity, Peace.",
       "",
       "And all must love the human form,",
@@ -492,7 +487,7 @@ blake_poems = [
     "author" => "William Blake",
     "lines" => [
       "'Twas on a Holy Thursday, their innocent faces clean,",
-      "Came children walking two and two, in read, and blue, and green =>",
+      "Came children walking two and two, in read, and blue, and green:",
       "Grey-headed beadles walked before, with wands as white as snow,",
       "Till into the high dome of Paul's they like Thames waters flow.",
       "",
@@ -502,7 +497,7 @@ blake_poems = [
       "Thousands of little boys and girls raising their innocent hands.",
       "",
       "Now like a mighty wild they raise to heaven the voice of song,",
-      "Or like harmonious thunderings the seats of heaven among =>",
+      "Or like harmonious thunderings the seats of heaven among:",
       "Beneath them sit the aged man, wise guardians of the poor.",
       "Then cherish pity, lest you drive an angel from your door."
     ],
@@ -533,7 +528,7 @@ blake_poems = [
       "They look in every thoughtless nest",
       "Where birds are covered warm",
       "They visit caves of every beast,",
-      "To keep them all from harm =>",
+      "To keep them all from harm:",
       "  If they see any weeping",
       "  That should have been sleeping,",
       "  They pour sleep on their head,",
@@ -549,10 +544,10 @@ blake_poems = [
       "  New worlds to inherit.",
       "",
       "And there the lion's ruddy eyes",
-      "Shall flow with tears of gold =>",
+      "Shall flow with tears of gold:",
       "And pitying the tender cries,",
-      "And walking round the fold =>",
-      "  Saying => \"Wrath by His meekness,",
+      "And walking round the fold:",
+      "  Saying: \"Wrath by His meekness,",
       "  And, by His health, sickness,",
       "  Are driven away",
       "  From our immortal day.",
@@ -640,20 +635,20 @@ blake_poems = [
       "Troubled, wildered, and forlorn,",
       "Dark, benighted, travel-worn,",
       "Over many a tangle spray,",
-      "All heart-broke, I heard her say =>",
+      "All heart-broke, I heard her say:",
       "",
       "\"Oh my children! do they cry,",
       "Do they hear their father sigh?",
       "Now they look abroad to see,",
       "Now return and weep for me.\"",
       "",
-      "Pitying, I dropped a tear =>",
+      "Pitying, I dropped a tear:",
       "But I saw a glow-worm near,",
       "Who replied, \"What wailing wight",
       "Calls the watchman of the night?",
       "",
       "\"I am set to light the ground,",
-      "While the beetle goes his round =>",
+      "While the beetle goes his round:",
       "Follow now the beetle's hum",
       "Little wanderer, hie thee home!\""
     ],
@@ -693,25 +688,25 @@ blake_poems = [
       "Oh no! never can it be!",
       "Never, never can it be!",
       "",
-      "He doth give his joy to all =>",
+      "He doth give his joy to all:",
       "He becomes an infant small,",
       "He becomes a man of woe,",
       "He doth feel the sorrow too.",
       "",
       "Think not thou canst sigh a sigh,",
-      "And thy Maker is not by =>",
+      "And thy Maker is not by:",
       "Think not thou canst weep a tear,",
       "And thy Maker is not near.",
       "",
       "Oh He gives to us his joy,",
-      "That our grief He may destroy =>",
+      "That our grief He may destroy:",
       "Till our grief is fled an gone",
       "He doth sit by us and moan."
     ],
     "line_count" => "36"
   },
   {
-    "title" => "Songs of Experience => Introduction",
+    "title" => "Songs of Experience: Introduction",
     "author" => "William Blake",
     "lines" => [
       "Hear the voice of the Bard,",
@@ -788,7 +783,7 @@ blake_poems = [
       "So sang a little clod of clay,",
       "  Trodden with the cattle's feet,",
       "But a pebble of the brook",
-      "  Warbled out these metres meet =>",
+      "  Warbled out these metres meet:",
       "",
       "\"Love seeketh only Self to please,",
       "  To bind another to its delight,",
@@ -813,7 +808,7 @@ blake_poems = [
       "",
       "And their son does never shine,",
       "  And their fields are bleak and bare,",
-      "And their ways are filled with thorns =>",
+      "And their ways are filled with thorns:",
       "  It is eternal winter there.",
       "",
       "For where'er the sun does shine,",
@@ -873,7 +868,7 @@ blake_poems = [
       "Viewed the maid asleep.",
       "",
       "The kingly lion stood,",
-      "And the virgin viewed =>",
+      "And the virgin viewed:",
       "Then he gambolled round",
       "O'er the hallowed ground.",
       "",
@@ -928,7 +923,7 @@ blake_poems = [
       "Till before their way",
       "A couching lion lay.",
       "",
-      "Turning back was vain =>",
+      "Turning back was vain:",
       "Soon his heavy mane",
       "Bore them to the ground,",
       "Then he stalked around,",
@@ -1055,7 +1050,7 @@ blake_poems = [
     "lines" => [
       "I dreamt a dream!  What can it mean?",
       "And that I was a maiden Queen",
-      "Guarded by an Angel mild =>",
+      "Guarded by an Angel mild:",
       "Witless woe was ne'er beguiled!",
       "",
       "And I wept both night and day,",
@@ -1132,7 +1127,7 @@ blake_poems = [
     "author" => "William Blake",
     "lines" => [
       "The modest Rose puts forth a thorn,",
-      "The humble sheep a threat'ning horn =>",
+      "The humble sheep a threat'ning horn:",
       "While the Lily white shall in love delight,",
       "Nor a thorn nor a threat stain her beauty bright."
     ],
@@ -1199,7 +1194,7 @@ blake_poems = [
     "title" => "Infant Sorrow",
     "author" => "William Blake",
     "lines" => [
-      "My mother groaned, my father wept =>",
+      "My mother groaned, my father wept:",
       "Into the dangerous world I leapt,",
       "Helpless, naked, piping loud,",
       "Like a fiend hid in a cloud.",
@@ -1231,12 +1226,12 @@ blake_poems = [
       "  And all admired the priestly care.",
       "",
       "And standing on the altar high,",
-      "  \"Lo, what a fiend is here!\" said he =>",
+      "  \"Lo, what a fiend is here!\" said he:",
       "\"One who sets reason up for judge",
       "  Of our most holy mystery.\"",
       "",
       "The weeping child could not be heard,",
-      "  The weeping parents wept in vain =>",
+      "  The weeping parents wept in vain:",
       "They stripped him to his little shirt,",
       "  And bound him in an iron chain,",
       "",
@@ -1301,7 +1296,7 @@ blake_poems = [
       "I love to rise on a summer morn,",
       "  When birds are singing on every tree",
       "The distant huntsman winds his horn,",
-      "  And the skylark sings with me =>",
+      "  And the skylark sings with me:",
       "  Oh what sweet company!",
       "",
       "But to go to school in a summer morn,--",
@@ -1342,7 +1337,7 @@ blake_poems = [
     "lines" => [
       "Whate'er is born of mortal birth",
       "Must be consumed with the earth,",
-      "To rise from generation free =>",
+      "To rise from generation free:",
       "Then what have I to do with thee?",
       "The sexes sprang from shame and pride,",
       "Blown in the morn, in evening died",
@@ -1356,7 +1351,7 @@ blake_poems = [
       "",
       "Didst close my tongue in senseless clay,",
       "And me to mortal life betray.",
-      "The death of Jesus set me free =>",
+      "The death of Jesus set me free:",
       "Then what have I to do with thee?"
     ],
     "line_count" => "16"
@@ -1384,32 +1379,32 @@ blake_poems = [
     "author" => "William Blake",
     "lines" => [
       "The daughters of Mne Seraphim led round their sunny flocks,",
-      "All but the youngest => she in paleness sought the secret air.",
-      "To fade away like morning beauty from her mortal day =>",
+      "All but the youngest: she in paleness sought the secret air.",
+      "To fade away like morning beauty from her mortal day:",
       "Down by the river of Adona her soft voice is heard",
       "And thus her gentle lamentation falls like morning dew.",
       "",
       "O life of this our spring!  why fades the lotus of the water?",
       "Why fade these children of the spring? born but to smile & fall.",
       "Ah! Thel is like a watry bow, and like a parting cloud,",
-      "Like a reflection in a glass => like shadows in the water",
+      "Like a reflection in a glass: like shadows in the water",
       "Like dreams of infants, like a smile upon an infants face.",
-      "Like the doves voice, like transient day, like music in the air =>",
+      "Like the doves voice, like transient day, like music in the air:",
       "Ah! gentle may I lay me down and gentle rest my head.",
       "And gentle sleep the sleep of death, and gently hear the voice",
       "Of him that walketh in the garden in the evening time.",
       "",
       "The Lilly of the valley breathing in the humble grass",
-      "Answerd the lovely maid and said => I am a watry weed,",
-      "And I am very small and love to dwell in lowly vales =>",
+      "Answerd the lovely maid and said: I am a watry weed,",
+      "And I am very small and love to dwell in lowly vales:",
       "So weak the gilded butterfly scarce perches on my head",
       "Yet I am visited from heaven and he that smiles on all",
       "Walks in the valley, and each morn over me spreads his hand",
       "Saying, rejoice thou humble grass, thou new-born lily flower.",
-      "Thou gentle maid of silent valleys and of modest brooks =>",
-      "For thou shall be clothed in light, and fed with morning manna =>",
+      "Thou gentle maid of silent valleys and of modest brooks:",
+      "For thou shall be clothed in light, and fed with morning manna:",
       "Till summers heat melts thee beside the fountains and the springs",
-      "To flourish in eternal vales => they why should Thel complain.",
+      "To flourish in eternal vales: they why should Thel complain.",
       "Why should the mistress of the vales of Har, utter a sigh.",
       "",
       "She ceasd & smild in tears, then sat down in her silver shrine.",
@@ -1422,7 +1417,7 @@ blake_poems = [
       "Thy wine doth purify the golden honey thy perfume.",
       "Which thou dost scatter on every little blade of grass that springs",
       "Revives the milked cow, & tames the fire-breathing steed.",
-      "But Thel is like a faint cloud kindled at the rising sun =>",
+      "But Thel is like a faint cloud kindled at the rising sun:",
       "I vanish from my pearly throne, and who shall find my place.",
       "",
       "Queen of the vales the Lily answered, ask the tender cloud,",
@@ -1430,7 +1425,7 @@ blake_poems = [
       "And why it scatters its bright beauty thro the humid air.",
       "Descend O little cloud & hover before the eyes of Thel.",
       "",
-      "The Cloud descended and the Lily bowd her modest head =>",
+      "The Cloud descended and the Lily bowd her modest head:",
       "And went to mind her numerous charge among the verdant grass."
     ],
     "line_count" => "43"
@@ -1440,28 +1435,28 @@ blake_poems = [
     "author" => "William Blake",
     "lines" => [
       "O little Cloud the virgin said, I charge thee to tell me",
-      "Why thou complainest now when in one hour thou fade away =>",
-      "Then we shall seek thee but not find => ah Thel is like to thee.",
+      "Why thou complainest now when in one hour thou fade away:",
+      "Then we shall seek thee but not find: ah Thel is like to thee.",
       "I pass away, yet I complain, and no one hears my voice.",
       "",
       "The Cloud then shewd his golden head & his bright form emerg'd.",
       "Hovering and glittering on the air before the face of Thel.",
       "",
       "O virgin know'st thou not our steeds drink of the golden springs",
-      "Where Luvah doth renew his horses => lookst thou on my youth.",
+      "Where Luvah doth renew his horses: lookst thou on my youth.",
       "And fearest thou because I vanish and am seen no more.",
       "Nothing remains O maid I tell thee, when I pass away.",
-      "It is to tenfold life, to love, to peace, and raptures holy =>",
-      "Unseen descending, weigh my light wings upon balmy flowers =>",
+      "It is to tenfold life, to love, to peace, and raptures holy:",
+      "Unseen descending, weigh my light wings upon balmy flowers:",
       "And court the fair eyed dew, to take me to her shining tent",
       "The weeping virgin, trembling kneels before the risen sun.",
-      "Till we arise link'd in a golden band and never part =>",
+      "Till we arise link'd in a golden band and never part:",
       "But walk united bearing food to all our tender flowers.",
       "",
-      "Dost thou O little cloud?  I fear that I am not like thee =>",
-      "For I walk through the vales of Har, and smell the sweetest flowers =>",
-      "But I feed not the little flowers => I hear the warbling birds,",
-      "But I feed not the warbling birds, they fly and seek their food =>",
+      "Dost thou O little cloud?  I fear that I am not like thee:",
+      "For I walk through the vales of Har, and smell the sweetest flowers:",
+      "But I feed not the little flowers: I hear the warbling birds,",
+      "But I feed not the warbling birds, they fly and seek their food:",
       "But Thel delights in these no more because I fade away",
       "And all shall say, without a use this shining women liv'd,",
       "Or did she only live to be at death the food of worms.",
@@ -1470,7 +1465,7 @@ blake_poems = [
       "",
       "Then if thou art the food of worms, O virgin of the skies,",
       "How great thy use, how great thy blessing, every thing that lives.",
-      "Lives not alone nor or itself => fear not and I will call,",
+      "Lives not alone nor or itself: fear not and I will call,",
       "The weak worm from its lowly bed, and thou shalt hear its voice.",
       "Come forth worm and the silent valley, to thy pensive queen.",
       "",
@@ -1487,16 +1482,16 @@ blake_poems = [
       "",
       "Art thou a Worm?  image of weakness,  art thou but a Worm?",
       "I see thee like an infant wrapped in the Lillys leaf",
-      "Ah weep not little voice, thou can'st not speak, but thou can'st weep =>",
-      "Is this a Worm?  I see they lay helpless & naked => weeping",
+      "Ah weep not little voice, thou can'st not speak, but thou can'st weep:",
+      "Is this a Worm?  I see they lay helpless & naked: weeping",
       "And none to answer, none to cherish thee with mothers smiles.",
       "",
-      "The Clod of Clay heard the Worms voice & rais'd her pitying head =>",
+      "The Clod of Clay heard the Worms voice & rais'd her pitying head:",
       "She bowd over the weeping infant, and her life exhald",
       "In milky fondness, then on Thel she fix'd her humble eyes",
       "",
       "O beauty of the vales of Har, we live not for ourselves,",
-      "Thou seest me the meanest thing, and so I am indeed =>",
+      "Thou seest me the meanest thing, and so I am indeed:",
       "My bosom of itself is cold, and of itself is dark,",
       "",
       "But he that loves the lowly, pours his oil upon my head",
@@ -1507,17 +1502,17 @@ blake_poems = [
       "I ponder, and I cannot ponder yet I live and love.",
       "",
       "The daughter of beauty wip'd her pitying tears with her white veil,",
-      "And said, Alas!  I knew not this, and therefore did I weep =>",
+      "And said, Alas!  I knew not this, and therefore did I weep:",
       "That God would love a Worm I knew, and punish the evil foot",
-      "That wilful bruis'd its helpless form => but that he cherish'd it",
+      "That wilful bruis'd its helpless form: but that he cherish'd it",
       "With milk and oil I never knew, and therefore did I weep,",
       "And I complaind in the mild air, because I fade away.",
       "And lay me down in thy cold bed, and leave my shining lot.",
       "",
-      "Queen of the vales, the matron Clay answered => I heard thy sighs.",
-      "And all thy moans flew o'er my roof, but I have call'd them down =>",
+      "Queen of the vales, the matron Clay answered: I heard thy sighs.",
+      "And all thy moans flew o'er my roof, but I have call'd them down:",
       "Wilt thou O Queen enter my house, tis given thee to enter,",
-      "And to return => fear nothing, enter with thy virgin feet."
+      "And to return: fear nothing, enter with thy virgin feet."
     ],
     "line_count" => "29"
   },
@@ -1525,14 +1520,14 @@ blake_poems = [
     "title" => "The Book of Thel. Part IV",
     "author" => "William Blake",
     "lines" => [
-      "The eternal gates terrific porter lifted the northern bar =>",
+      "The eternal gates terrific porter lifted the northern bar:",
       "Thel enter'd in & saw the secrets of the land unknown",
       "She saw the couches of the dead, & where the fibrous roots",
-      "Of every heart on earth infixes deep its restless twists =>",
+      "Of every heart on earth infixes deep its restless twists:",
       "A land of sorrows & of tears where never smile was seen.",
       "",
       "She wandered in the land of clouds thro' valleys dark, listning",
-      "Dolors & lamentations => waiting oft beside the dewy grave",
+      "Dolors & lamentations: waiting oft beside the dewy grave",
       "She stood in silence, listning to the voices of the ground,",
       "Till to her own grave plot she came, & there she sat down.",
       "And heard this voice of sorrow breathed from the hollow pit.",
@@ -1555,7 +1550,7 @@ blake_poems = [
     "line_count" => "22"
   },
   {
-    "title" => "The Marriage of Heaven and Hell => The Argument",
+    "title" => "The Marriage of Heaven and Hell: The Argument",
     "author" => "William Blake",
     "lines" => [
       "Rintrah roars and shakes his fires in the burden'd air,",
@@ -1572,7 +1567,7 @@ blake_poems = [
       "And a river and a spring",
       "On every cliff and tomb",
       "And on the bleached bones",
-      "Red clay brought forth =>",
+      "Red clay brought forth:",
       "Till the villain left the paths of ease",
       "To walk in perilous paths, and drive",
       "The just man into barren climes.",
@@ -1616,7 +1611,7 @@ blake_poems = [
       "",
       "Pretty joy!",
       "Sweet joy, but two days old.",
-      "Sweet Joy I call thee =>",
+      "Sweet Joy I call thee:",
       "Thou dost smile,",
       "I sing the while",
       "Sweet joy befall thee!"

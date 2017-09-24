@@ -48,9 +48,9 @@ class User < ApplicationRecord
     graph_colors = ["berrypie", "frogideas", "duskfalling", "heatwave", "summerwarmth", "bythepool"]
     num_colors = [3, 4]
     style = graph_styles.sample
-    color = graph_color.sample
+    color = graph_colors.sample
     color_num = num_colors.sample
 
-    self.img_url = "http://www.tinygraphs.com/labs/isogrids/hexa16/#{self.username}?theme#{color}=&numcolors=#{color_num}&size=220&fmt=svg"
+    self.img_url = "http://www.tinygraphs.com/labs/isogrids/hexa16/#{self.username}?theme=#{color}&numcolors=#{color_num}&size=220&fmt=svg"
   end
 end
