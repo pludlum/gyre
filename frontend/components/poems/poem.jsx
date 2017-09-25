@@ -15,10 +15,6 @@ class Poem extends React.Component {
   }
 
 
-  displayAnnotation(e) {
-    e.preventDefault();
-    this.props.fetchAnnotation(e.currentTarget.id);
-  }
 
 
   findAnnoIndexes() {
@@ -31,15 +27,36 @@ class Poem extends React.Component {
     });
   }
 
+  displayAnnotation(e) {
+    e.preventDefault();
+    this.props.fetchAnnotation(e.currentTarget.id);
+  }
+
   grabSelection(e) {
     e.preventDefault();
     let start = window.getSelection().anchorOffset;
     let end = window.getSelection().focusOffset;
 
+    // FIND CURRENT SPAN
+    let spanNum = (e.currentTarget.getAttribute('name')) * 1;
+
+    // ITERATE THROUGH THE PREVIOUS SPANS, ADD THEIR LENGTH TO
+    // SELECTION COUNT
+    for (let i = 0; i < spanNum; i++) {
+      let currentSpan = document.getElementsByName(i);
+      let spanLength = currentSpan[0].innerHTML.length;
+
+      start += spanLength;
+      end += spanLength;
+
+    }
+
+
     this.setState({
       selectionStart: start,
       selectionEnd: end,
     });
+    this.props.handleSelection(start, end);
   }
 
 

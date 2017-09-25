@@ -14,6 +14,7 @@ class PoemDetail extends React.Component {
       annoDisplay: false
     };
 
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
 
@@ -21,13 +22,17 @@ class PoemDetail extends React.Component {
     this.props.fetchPoet(this.props.poetId);
     this.props.fetchPoem(this.props.poemId);
     this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
-
   }
 
   componentWillReceiveProps() {
+    console.log(this.props.currentAnno);
     if (this.props.currentAnno.length > 0 ) {
-      this.setState({annoDisplay: true});
+      this.setState({annoDisplay: true, formDisplay: false});
     }
+  }
+
+  handleSelection(start, end) {
+    this.setState({selectionStart: start, selectionEnd: end, formDisplay: true, annoDisplay: false});
   }
 
 
@@ -42,7 +47,7 @@ class PoemDetail extends React.Component {
     let annotationSpace = null;
 
 
-    if (this.state.annoDisplay) {
+    if (this.state.annoDisplay === true) {
       annotationSpace = <p> {this.props.currentAnno[0].body} </p>;
     } else if (this.state.formDisplay) {
       annotationSpace = <p> "form goes here!" </p>;
@@ -72,7 +77,8 @@ class PoemDetail extends React.Component {
             <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
             <Poem poemBody={this.props.poem.body}
                   annotations= {this.props.annotations}
-                  fetchAnnotation={this.props.fetchAnnotation} />
+                  fetchAnnotation={this.props.fetchAnnotation}
+                  handleSelection={this.handleSelection} />
           </div>
           <div className="annotation-column">
             <div className="annotation-container">
@@ -83,7 +89,6 @@ class PoemDetail extends React.Component {
       </div>
     );
   }
-
 }
 
 
