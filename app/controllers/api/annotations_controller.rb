@@ -1,6 +1,6 @@
 class Api::AnnotationsController < ApplicationController
 
-  before_action only:
+  before_action :ensure_logged_in, except: %i[index show]
 
   def index
     @annotations = Annotation.all.where(poem_id: params[:poem_id])

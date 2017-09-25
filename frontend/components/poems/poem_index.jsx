@@ -18,7 +18,7 @@ class PoemIndex extends React.Component {
     }
     console.log(this.props.poems);
 
-    let poem_item_list = this.props.poems.map( poem => (
+    let poemItemList = this.props.poems.map( poem => (
       <PoemItem key={`poem-item-${poem.id}`} poem={poem} />
     ));
 
@@ -30,7 +30,7 @@ class PoemIndex extends React.Component {
         <span className="divider" ></span>
         <div className="poem-index-box">
           <ul className="poem-index-list">
-            {poem_item_list}
+            {poemItemList}
           </ul>
         </div>
       </div>

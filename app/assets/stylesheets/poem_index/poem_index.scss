@@ -1,0 +1,33 @@
+.poem-index-component {
+  margin-bottom: 10%;
+  margin-top: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poem-index-title-box {
+  margin-bottom: 30px;
+}
+
+.poem-index-title {
+  font-family: 'Muli', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+
+  padding-bottom: 5%;
+}
+
+// already defined home stylesheet --- refactor needed
+// .divider {
+//   width: 60%
+// }
+
+.poem-index-box {
+  margin-top: 30px;
+}
+
+.poem-index-list {
+
+}
