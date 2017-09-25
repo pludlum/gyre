@@ -6,6 +6,7 @@
                   :poem_id,
                   :start_idx,
                   :end_idx,
-                  :source_text
+                  :source_text,
+                  :body
   end
 end

@@ -5,8 +5,8 @@ Poet.delete_all
 Poem.delete_all
 
 
-User.create(username: "anonymous", password:  "tobeornottobe")
-
+anonymous = User.new(username: "anonymous", password:  "tobeornottobe")
+anonymous.save
 
 def create_poets
   poets = []
@@ -12964,3 +12964,18 @@ end
 poe_poems.each do |poem|
   Poem.create(poem)
 end
+
+
+# -------- ANNOTATIONS ------
+
+blake = Poet.find_by(name: "William Blake")
+divine_image = Poem.find_by(title: "A DIVINE IMAGE")
+
+first_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: divine_image.id,
+  body: "test annotation",
+  start_idx: 0,
+  end_idx: 12
+)
+first_anno.save

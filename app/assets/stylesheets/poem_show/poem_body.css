@@ -1,4 +1,12 @@
+.poem-show-body-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 .poem-body {
+  width: 100%;
   font-family: 'Muli', sans-serif;
   font-size: 18px;
   line-height: 130%;
@@ -22,4 +30,26 @@
 .poet-name.poem.author {
   font-size: 20px;
   margin-top: 0px;
+}
+
+.annotation-column {
+  margin-top: 15%;
+  margin-right: 10%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.annotation-container {
+
+}
+
+
+.annotated {
+  background-color: rgba(94, 190, 137, 0.2);
+}
+
+.annotated:hover {
+  background-color: rgba(94, 190, 137, 0.5);
 }
