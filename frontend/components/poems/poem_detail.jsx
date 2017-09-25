@@ -28,7 +28,6 @@ class PoemDetail extends React.Component {
     if (this.props.currentAnno.length > 0 ) {
       this.setState({annoDisplay: true});
     }
-
   }
 
 
