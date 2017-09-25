@@ -1,5 +1,5 @@
 .poem-index-item {
-width: 100%;
+width: 130%;
 display: block;
 
 }
@@ -20,6 +20,9 @@ display: block;
   padding-bottom: 25px;
   border-bottom: solid 1px black;
 
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .poem-item-span {
@@ -27,5 +30,5 @@ display: block;
 }
 
 .poem-item-author {
-  
+
 }

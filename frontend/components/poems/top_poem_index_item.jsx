@@ -9,6 +9,7 @@ const TopPoemItem = ({poem}) => {
     <Link className="poem-item-link" to={`/poets/${poem.author_id}/poems/${poem.id}`}>
       <div className="poem-item-container">
         <span className="poem-item-span" >{poem.title}</span>
+        <span className="poem-item-author">{poem.author}</span>
       </div>
     </Link>
   </li>

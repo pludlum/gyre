@@ -20,7 +20,7 @@ class PoetIndex extends React.Component {
     return (
       <div className="poet-index-component">
         <div className="poet-index-title-box">
-          <span className="poet-index-title">Poets</span>
+          <span className="poet-index-title">Popular Poets</span>
         </div>
         <span className="divider" ></span>
         <div className="poet-index-box">
