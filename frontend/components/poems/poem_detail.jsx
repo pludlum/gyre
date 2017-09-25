@@ -8,14 +8,16 @@ class PoemDetail extends React.Component {
     super(props);
 
     this.state = {
-      current_anno: null,
+      selectionStart: null,
+      selectionEnd: null,
+      formDisplay: false,
+      annoDisplay: false
     };
 
   }
 
 
   componentDidMount() {
-    console.log(this.props.poetId, this.props.poemId);
     this.props.fetchPoet(this.props.poetId);
     this.props.fetchPoem(this.props.poemId);
     this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
@@ -23,18 +25,29 @@ class PoemDetail extends React.Component {
   }
 
   componentWillReceiveProps() {
-    console.log(this.props);
+    if (this.props.currentAnno.length > 0 ) {
+      this.setState({annoDisplay: true});
+    }
+
   }
 
+
+
   render() {
-    console.log(this.props);
 
     if (this.props.poem === undefined) return null;
 
     let nameArray = this.props.poet.name.split(' ');
     let lastName = nameArray[nameArray.length-1];
 
+    let annotationSpace = null;
 
+
+    if (this.state.annoDisplay) {
+      annotationSpace = <p> {this.props.currentAnno[0].body} </p>;
+    } else if (this.state.formDisplay) {
+      annotationSpace = <p> "form goes here!" </p>;
+    }
 
     return (
       <div className="poet_detail_container" >
@@ -59,11 +72,12 @@ class PoemDetail extends React.Component {
             <h3 className="poet-name poem">{this.props.poem.title}</h3>
             <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
             <Poem poemBody={this.props.poem.body}
-                  annotations= {this.props.annotations} />
+                  annotations= {this.props.annotations}
+                  fetchAnnotation={this.props.fetchAnnotation} />
           </div>
           <div className="annotation-column">
             <div className="annotation-container">
-              <p> {this.state.current_anno}  </p>
+              {annotationSpace}
             </div>
           </div>
         </div>

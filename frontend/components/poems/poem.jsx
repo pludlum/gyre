@@ -10,8 +10,14 @@ class Poem extends React.Component {
       selectionEnd: null
     };
 
+    this.displayAnnotation = this.displayAnnotation.bind(this);
+    this.grabSelection = this.grabSelection.bind(this);
+  }
 
-    this.handleSelection = this.handleSelection.bind(this);
+
+  displayAnnotation(e) {
+    e.preventDefault();
+    this.props.fetchAnnotation(e.currentTarget.id);
   }
 
 
@@ -33,7 +39,6 @@ class Poem extends React.Component {
     this.setState({
       selectionStart: start,
       selectionEnd: end,
-      selection: sel,
     });
   }
 
@@ -62,7 +67,7 @@ class Poem extends React.Component {
             if (this.startIdxs[i][0] === currentIdx || currentIdx === this.props.poemBody.length-1) {
               annoFlag = true;
               allSpans.push(<span key={`text-span-${spanKey}`}
-                                  id={`${spanKey}`}
+                                  name={`${spanKey}`}
                                   className={`unannotated`}
                                   onClick={this.grabSelection}
                                   >{currentText}</span>);
@@ -75,9 +80,10 @@ class Poem extends React.Component {
             if (this.endIdxs[i][0] === currentIdx) {
               annoFlag = false;
               allSpans.push(<span key={`text-span-${spanKey}`}
-                                  id={`${spanKey}`}
+                                  name={`${spanKey}`}
+                                  id={this.endIdxs[i][1]}
                                   className={`annotated`}
-                                  onClick={this.grabAnnotation()}
+                                  onClick={this.displayAnnotation}
                                   >{currentText}</span>);
               currentText = "";
               spanKey++;
@@ -87,8 +93,9 @@ class Poem extends React.Component {
         currentText += this.props.poemBody[currentIdx];
         currentIdx++;
       }
-      console.log(allSpans);
+
       return allSpans;
+
     } else {
       /// NO ANNOTATIONS MEANS RETURN FULL TEXT
       return <span className="unannotated" >{this.props.poemBody}</span>;
@@ -100,8 +107,7 @@ class Poem extends React.Component {
   render() {
     console.log(this.state.selectionStart);
     console.log(this.state.selectionEnd);
-    console.log(this.state.selection);
-    console.log(this.props.annotations);
+
 
     return (
       <div>
