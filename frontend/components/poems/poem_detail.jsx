@@ -41,6 +41,7 @@ class PoemDetail extends React.Component {
 
         <div className="poet-description-container poem">
           <h3 className="poet-name poem">{this.props.poem.title}</h3>
+          <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
           <Poem poemBody={this.props.poem.body} />
         </div>
       </div>
