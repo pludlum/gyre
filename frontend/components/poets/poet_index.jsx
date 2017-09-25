@@ -1,5 +1,6 @@
 import React from 'react';
 import PoetItem from './poet_index_item';
+import TopPoemIndexContainer from '../poems/top_poem_container';
 
 
 class PoetIndex extends React.Component {
@@ -27,6 +28,7 @@ class PoetIndex extends React.Component {
             {poet_item_list}
           </ul>
         </div>
+        <TopPoemIndexContainer />
       </div>
     );
   }

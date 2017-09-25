@@ -4,12 +4,14 @@ import ErrorsReducer from './errors_reducer';
 import PoetsReducer from './poets_reducer';
 import PoemsReducer from './poems_reducer';
 import AnnotationsReducer from './annotations_reducer.js';
+import TopPoemReducer from './top_poem_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
   errors: ErrorsReducer,
   poets: PoetsReducer,
   poems: PoemsReducer,
+  topPoems: TopPoemReducer,
   annotations: AnnotationsReducer
 });
 

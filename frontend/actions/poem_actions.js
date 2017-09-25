@@ -1,4 +1,4 @@
-import { poemsGET, poemGET } from '../util/poetry_api_util';
+import { poemsGET, poemGET} from '../util/poetry_api_util';
 
 export const RECEIVE_POEM = 'RECEIVE_POEM';
 export const RECEIVE_POEMS = 'RECEIVE_POEMS';

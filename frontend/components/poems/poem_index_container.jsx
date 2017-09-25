@@ -6,9 +6,6 @@ import PoemIndex from './poem_index';
 
 const mapStateToProps = (state, ownProps) => {
 
-  console.log(
-    );
-
   return ({
     poetId: ownProps.poetId,
     // FIND ONLY THE POEMS BELONGING TO THIS AUTHOR

@@ -1,8 +1,13 @@
 class Api::PoemsController < ApplicationController
 
+  def top_index
+    @poems = Poem.all.order(:title).limit(10)
+    render 'api/poems/index'
+  end
 
   def index
     @poems = Poem.where(author_id: params[:poet_id])
+    render 'api/poems/index'
   end
 
   def show
