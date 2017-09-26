@@ -12,6 +12,7 @@ class Poem extends React.Component {
 
     this.displayAnnotation = this.displayAnnotation.bind(this);
     this.grabSelection = this.grabSelection.bind(this);
+
   }
 
 
@@ -26,6 +27,10 @@ class Poem extends React.Component {
       this.endIdxs.push([annotation.end_idx, annotation.id]);
     });
   }
+
+
+
+
 
   displayAnnotation(e) {
     e.preventDefault();
@@ -135,7 +140,7 @@ class Poem extends React.Component {
 
     return (
       <div>
-        <p className="poem-body" >
+        <p className="poem-body" onClick={this.findHeight} >
           {this.highlightAnnotations()}
         </p>
       </div>

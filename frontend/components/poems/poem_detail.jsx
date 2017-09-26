@@ -18,6 +18,7 @@ class PoemDetail extends React.Component {
 
     this.handleSelection = this.handleSelection.bind(this);
     this.update = this.update.bind(this);
+    this.findHeight = this.findHeight.bind(this);
   }
 
 
@@ -41,6 +42,10 @@ class PoemDetail extends React.Component {
     }
   }
 
+  findHeight(e) {
+    console.log(e.nativeEvent.offsetY);
+    this.height = e.nativeEvent.offsetY;
+  }
 
   update() {
     this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
@@ -51,6 +56,10 @@ class PoemDetail extends React.Component {
     this.setState({selectionStart: start, selectionEnd: end, formDisplay: true, annoDisplay: false});
   }
 
+  // handleHeight(yOffset) {
+  //   console.log(yOffset);
+  //   this.height = yOffset;
+  // }
 
 
   render() {
@@ -64,15 +73,17 @@ class PoemDetail extends React.Component {
 
 
     if (this.state.annoDisplay === true) {
-      annotationSpace = <AnnotationDetailContainer key={Date.now} />;
+      annotationSpace = <AnnotationDetailContainer key={Date.now}
+                                                   height={this.height} />;
     } else if (this.state.formDisplay) {
-      console.log('here');
       annotationSpace = <AnnotationFormContainer key ={Date.now()}
                                                  start={this.state.selectionStart}
                                                  end={this.state.selectionEnd}
                                                  poemId={this.props.poemId}
                                                  poetId={this.props.poetId}
-                                                 update = {this.update} />;
+                                                 update={this.update}
+                                                 yOffset={this.yOffset}
+                                                 height={this.height} />;
     }
 
     return (
@@ -94,13 +105,14 @@ class PoemDetail extends React.Component {
         </div>
 
         <div className="poem-show-body-container ">
-          <div className="poet-description-container poem">
+          <div className="poet-description-container poem" onClick={this.findHeight}>
             <h3 className="poet-name poem">{this.props.poem.title}</h3>
             <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
             <Poem poemBody={this.props.poem.body}
                   annotations= {this.props.annotations}
                   fetchAnnotation={this.props.fetchAnnotation}
-                  handleSelection={this.handleSelection} />
+                  handleSelection={this.handleSelection}
+                  handleHeight={this.handleHeight} />
           </div>
           <div className="annotation-column">
             <div className="annotation-container">

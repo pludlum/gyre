@@ -60,11 +60,9 @@ class AnnotationForm extends React.Component {
   }
 
   render() {
-    console.log("form start");
-    console.log(this.state.start_idx);
 
     return (
-        <div className="annotation-form-container">
+        <div className="annotation-form-container" style={{paddingTop: this.props.height}}>
           {this.renderErrors()}
           <form id="anno-form" onSubmit={this.handleSubmit} className="session-form">
             <textarea form="anno-form"
