@@ -37,6 +37,8 @@ class Poem extends React.Component {
     let start = window.getSelection().anchorOffset;
     let end = window.getSelection().focusOffset;
 
+    if (start === end) return;
+
     // FIND CURRENT SPAN
     let spanNum = (e.currentTarget.getAttribute('name')) * 1;
 
@@ -115,16 +117,15 @@ class Poem extends React.Component {
 
     } else {
       /// NO ANNOTATIONS MEANS RETURN FULL TEXT
-      return <span className="unannotated" >{this.props.poemBody}</span>;
+      return <span name="0" onClick={this.grabSelection} className="unannotated" >{this.props.poemBody}</span>;
     }
   }
 
 
 
   render() {
-    console.log(this.state.selectionStart);
-    console.log(this.state.selectionEnd);
 
+    if (this.props.poemBody === undefined) return null;
 
     return (
       <div>

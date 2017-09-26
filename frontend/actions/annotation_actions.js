@@ -18,9 +18,8 @@ export const receiveAnnotation = (annotation) => ({
   annotation
 });
 
-export const removeAnnotation = (annotation) => ({
+export const removeAnnotation = () => ({
   type: REMOVE_ANNOTATION,
-  annotation
 });
 
 

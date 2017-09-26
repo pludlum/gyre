@@ -16,6 +16,8 @@ import {
 } from 'react-router-dom';
 
 
+
+
 const App = () => (
   <div className="app">
     <div className="nav-bar-div">
@@ -29,8 +31,8 @@ const App = () => (
         <Route exact path="/" component={PoetIndexContainer} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <Route exact path="/poets/:poetId" component={PoetDetailContainer} />
-        <Route path="/poets/:poetId/poems/:poemId" component={PoemDetailContainer} />
+        <Route exact path="/poets/:poetId" component={PoetDetailContainer} key={`${Date.now()}`} />
+        <Route path="/poets/:poetId/poems/:poemId" component={PoemDetailContainer} key={`${Date.now()}`} />
       </Switch>
     </div>
 

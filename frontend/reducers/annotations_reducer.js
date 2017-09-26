@@ -8,7 +8,7 @@ const AnnotationsReducer = (annoState = [], action) => {
   let newState;
   switch(action.type) {
     case RECEIVE_ANNOTATIONS:
-      newState = merge({}, annoState, action.annotations);
+      newState = merge({}, action.annotations);
       return newState;
     default:
       return annoState;

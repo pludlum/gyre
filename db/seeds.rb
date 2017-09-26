@@ -3,6 +3,7 @@
 User.delete_all
 Poet.delete_all
 Poem.delete_all
+Annotation.delete_all
 
 
 anonymous = User.new(username: "anonymous", password:  "tobeornottobe")

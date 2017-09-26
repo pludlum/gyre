@@ -7,3 +7,5 @@ json.extract! @annotation,
               :start_idx,
               :end_idx,
               :source_text
+
+json.username @annotation.user.username
