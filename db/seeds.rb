@@ -9,6 +9,8 @@ Annotation.delete_all
 anonymous = User.new(username: "anonymous", password:  "tobeornottobe")
 anonymous.save
 
+
+
 def create_poets
   poets = []
 
@@ -12970,13 +12972,38 @@ end
 # -------- ANNOTATIONS ------
 
 blake = Poet.find_by(name: "William Blake")
+
+
 divine_image = Poem.find_by(title: "A DIVINE IMAGE")
+summers_day = Poem.find_by(title: "Sonnet 18: Shall I compare thee to a summer's day?")
+success = Poem.find_by(title: "Success is counted sweetest")
 
 first_anno = Annotation.new(
   user_id: anonymous.id,
   poem_id: divine_image.id,
-  body: "test annotation",
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   start_idx: 0,
-  end_idx: 12
+  end_idx: 25
 )
+
+second_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: summers_day.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 0,
+  end_idx: 25
+)
+
+third_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: success.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 0,
+  end_idx: 25
+)
+
+
+
 first_anno.save
+second_anno.save
+third_anno.save

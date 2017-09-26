@@ -31,6 +31,10 @@ class Poem < ApplicationRecord
 
   after_initialize :ensure_author_id, :ensure_body
 
+  # def top_poems_list
+  #     scope Poem.left_joins(:annotations).group(:id).order('COUNT(annotations.id) DESC').limit(10)
+  # end
+
   def ensure_author_id
     poet = Poet.find_by(name: self.author)
     self.author_id ||= poet.id

@@ -1,7 +1,7 @@
 class Api::PoemsController < ApplicationController
 
   def top_index
-    @poems = Poem.all.order(:title).limit(10)
+    @poems = Poem.joins(:annotations).group("poems.id").order("count(annotations.id) DESC")
     render 'api/poems/index'
   end
 
