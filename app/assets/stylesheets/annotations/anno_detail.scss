@@ -28,12 +28,18 @@
   padding-left: 15px;
 }
 
-.like-buttons-container {
+.annotation-footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
   border-top: solid 0.5px black;
   padding-top: 10px;
+}
+
+.like-buttons-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .delete-button:hover {

@@ -23,11 +23,13 @@ class AnnotationDetail extends React.Component {
         <div className="annotation-body-container">
           <p className="annotation-body">{this.props.annotation.body}</p>
           <p className="annotation-author"> - {this.props.annotation.username}</p>
-          <div className="like-buttons-container">
-            <span className="rating-span" > Rating: {`${this.props.annotation.rating}`} </span>
+          <div className="annotation-footer">
+            <div className="like-buttons-container">
+              <i className="fa fa-thumbs-o-down"></i>
+              <span className="rating-span" > Rating: {`${this.props.annotation.rating}`} </span>
+              <i className="fa fa-thumbs-o-up"></i>
+            </div>
             <span onClick={this.handleDelete} className="delete-button"> Delete </span>
-
-          <i className="fa fa-thumbs-o-up"></i>
           </div>
         </div>
       </div>
