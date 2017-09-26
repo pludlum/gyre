@@ -39,6 +39,12 @@ class Poem extends React.Component {
 
     if (start === end) return;
 
+    if (end < start) {
+      let temp = start;
+      start = end;
+      end = temp;
+    }
+
     // FIND CURRENT SPAN
     let spanNum = (e.currentTarget.getAttribute('name')) * 1;
 

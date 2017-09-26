@@ -48,14 +48,13 @@
 
 
 .banner-name {
-
   position: absolute;
   z-index: 55;
   left: 5%;
-  top: -170%;
+  top: -10vw;
 
   font-family: 'Muli', sans-serif;
-  font-size: 6vw;
+  font-size: 8vw;
   font-weight: bold;
   color: white;
 

@@ -5,6 +5,13 @@ import React from 'react';
 class AnnotationDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete() {
+    this.props.deleteAnnotation(this.props.annotation.id);
+    this.props.removeAnnotation();
   }
 
 
@@ -17,9 +24,10 @@ class AnnotationDetail extends React.Component {
           <p className="annotation-body">{this.props.annotation.body}</p>
           <p className="annotation-author"> - {this.props.annotation.username}</p>
           <div className="like-buttons-container">
-            <span className="rating-span" > Rating: 0 </span>
+            <span className="rating-span" > Rating: {`${this.props.annotation.rating}`} </span>
+            <span onClick={this.handleDelete} className="delete-button"> Delete </span>
 
-          <i class="fa fa-thumbs-o-up"></i>
+          <i className="fa fa-thumbs-o-up"></i>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ class PoemDetail extends React.Component {
 
 
   componentDidMount() {
-    console.log('here');
+
     this.props.removeAnnotation();
 
     this.props.fetchPoet(this.props.poetId);
@@ -32,7 +32,7 @@ class PoemDetail extends React.Component {
 
 
   componentWillReceiveProps() {
-    this.setState({update: this.state.update += 1});
+    this.setState({update: Date.now()});
 
     if (this.props.currentAnno.length > 0 ) {
       this.setState({annoDisplay: true, formDisplay: false});
@@ -44,8 +44,7 @@ class PoemDetail extends React.Component {
 
   update() {
     this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
-    this.setState({update: "update!"});
-    this.setState({update: ""});
+    this.setState({update: Date.now()});
   }
 
   handleSelection(start, end) {
@@ -55,10 +54,6 @@ class PoemDetail extends React.Component {
 
 
   render() {
-    console.log(this.state.selectionStart);
-    console.log(this.state.selectionEnd);
-    console.log(this.state.formDisplay);
-    console.log(this.state.annoDisplay);
 
     if (this.props.poem === undefined || this.props.poet === undefined) return null;
 
