@@ -25,7 +25,7 @@ class AnnotationDetail extends React.Component {
           <p className="annotation-body">{this.props.annotation.body}</p>
           <p className="annotation-author"> - {this.props.annotation.username}</p>
           <div className="annotation-footer">
-            <VoteButtonsContainer />
+            <VoteButtonsContainer key={Date.now()} />
             <span onClick={this.handleDelete} className="delete-button"> Delete </span>
           </div>
         </div>
