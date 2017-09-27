@@ -32,10 +32,10 @@ class PoemDetail extends React.Component {
   }
 
 
-  componentWillReceiveProps() {
-    this.setState({update: Date.now()});
+  componentWillReceiveProps(nextProps) {
+    this.setState({update: this.state.update + 1});
 
-    if (this.props.currentAnno.length > 0 ) {
+    if (nextProps.currentAnno.length > 0 ) {
       this.setState({annoDisplay: true, formDisplay: false});
     } else {
       this.setState({annoDisplay: false});
@@ -108,7 +108,7 @@ class PoemDetail extends React.Component {
                   annotations= {this.props.annotations}
                   fetchAnnotation={this.props.fetchAnnotation}
                   handleSelection={this.handleSelection}
-                  handleHeight={this.handleHeight} />
+                  update={this.update} />
           </div>
           <div className="annotation-column">
             <div className="annotation-container">

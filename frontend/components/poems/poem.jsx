@@ -142,7 +142,7 @@ class Poem extends React.Component {
 
     return (
       <div>
-        <p className="poem-body" onClick={this.findHeight} >
+        <p className="poem-body" >
           {this.highlightAnnotations()}
         </p>
       </div>
