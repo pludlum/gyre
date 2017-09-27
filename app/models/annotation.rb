@@ -37,12 +37,9 @@ class Annotation < ApplicationRecord
 
   # ----- Methods -------
 
-
   def change_rating(val)
-    self.rating += val;
+    self.rating += val
     self.save!
   end
-
-
 
 end

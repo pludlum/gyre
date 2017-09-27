@@ -19,7 +19,7 @@ class Api::AnnotationsController < ApplicationController
   end
 
   def show
-    @annotation = Annotation.includes(:user).find(params[:id])
+    @annotation = Annotation.includes(:user, :votes).find(params[:id])
     if @annotation
       render "api/annotations/show"
     else

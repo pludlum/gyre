@@ -1,4 +1,5 @@
 import React from 'react';
+import VoteButtonsContainer from '../vote_buttons/vote_buttons_container';
 
 
 
@@ -24,11 +25,7 @@ class AnnotationDetail extends React.Component {
           <p className="annotation-body">{this.props.annotation.body}</p>
           <p className="annotation-author"> - {this.props.annotation.username}</p>
           <div className="annotation-footer">
-            <div className="like-buttons-container">
-              <i className="fa fa-thumbs-o-down"></i>
-              <span className="rating-span" > Rating: {`${this.props.annotation.rating}`} </span>
-              <i className="fa fa-thumbs-o-up"></i>
-            </div>
+            <VoteButtonsContainer />
             <span onClick={this.handleDelete} className="delete-button"> Delete </span>
           </div>
         </div>

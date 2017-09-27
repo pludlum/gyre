@@ -9,3 +9,5 @@ json.extract! @annotation,
               :source_text
 
 json.username @annotation.user.username
+
+json.votes @annotation.votes

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     end
     resources :poems, only: %i[show create]
     resources :annotations, only: %i[show create update destroy]
+    resources :votes, only: %i[create destroy]
   end
 
   get 'api/top_poems', defaults: { format: :json }, to: 'api/poems#top_index'

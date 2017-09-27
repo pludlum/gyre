@@ -43,7 +43,6 @@ class PoemDetail extends React.Component {
   }
 
   findHeight(e) {
-    console.log(e.nativeEvent.offsetY);
     this.height = e.nativeEvent.offsetY;
   }
 
