@@ -29,11 +29,19 @@ class Annotation < ApplicationRecord
 
   belongs_to :user
 
+  has_many :votes
+
   has_one :poet,
           through: :poem,
           source: :poet
 
   # ----- Methods -------
+
+
+  def change_rating(val)
+    self.rating += val;
+    self.save!
+  end
 
 
 

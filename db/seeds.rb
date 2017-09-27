@@ -12975,8 +12975,14 @@ blake = Poet.find_by(name: "William Blake")
 
 
 divine_image = Poem.find_by(title: "A DIVINE IMAGE")
+tyger = Poem.find_by(title: "The Tyger")
 summers_day = Poem.find_by(title: "Sonnet 18: Shall I compare thee to a summer's day?")
+sonnet130 = Poem.find_by(title: "Sonnet 130: My mistress' eyes are nothing like the sun")
 success = Poem.find_by(title: "Success is counted sweetest")
+dream = Poem.find_by(title: "A Dream Within A Dream")
+butterfly = Poem.find_by(title: "Defrauded I a Butterfly --")
+arcturus = Poem.find_by(title: '"Arcturus" is his other name')
+
 
 first_anno = Annotation.new(
   user_id: anonymous.id,
@@ -13002,8 +13008,89 @@ third_anno = Annotation.new(
   end_idx: 25
 )
 
+fourth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: tyger.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 0,
+  end_idx: 117
+)
+
+fifth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: tyger.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 476,
+  end_idx: 537
+)
+
+sixth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: success.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 264,
+  end_idx: 312
+)
+
+seventh_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: sonnet130.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 0,
+  end_idx: 80
+)
+
+eighth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: sonnet130.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 270,
+  end_idx: 290
+)
+
+nineth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: dream.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 276,
+  end_idx: 306
+)
+
+tenth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: dream.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 411,
+  end_idx: 498
+)
+
+eleventh_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: butterfly.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 0,
+  end_idx: 23
+)
+
+twelfth_anno = Annotation.new(
+  user_id: anonymous.id,
+  poem_id: arcturus.id,
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  start_idx: 1,
+  end_idx: 9
+)
+
 
 
 first_anno.save
 second_anno.save
 third_anno.save
+fourth_anno.save
+fifth_anno.save
+sixth_anno.save
+seventh_anno.save
+eighth_anno.save
+nineth_anno.save
+tenth_anno.save
+eleventh_anno.save
+twelfth_anno.save

@@ -19,7 +19,7 @@ class AnnotationDetail extends React.Component {
     if (this.props.annotation === undefined) return null;
 
     return (
-      <div className="annotation-detail-column" style={{paddingTop: this.props.height}}>
+      <div className="annotation-detail-column" style={{paddingTop: this.props.height - 100}}>
         <div className="annotation-body-container">
           <p className="annotation-body">{this.props.annotation.body}</p>
           <p className="annotation-author"> - {this.props.annotation.username}</p>

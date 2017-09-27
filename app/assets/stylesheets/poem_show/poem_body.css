@@ -1,6 +1,8 @@
 .poem-show-body-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20vh;
+  margin-left: 5vw;
 }
 
 
@@ -12,7 +14,7 @@
   line-height: 130%;
   white-space: pre-wrap;
 
-  margin-bottom: 15%;
+
 }
 
 .poem-body::selection {
@@ -34,10 +36,11 @@
 
 .annotation-column {
 
-  margin-right: 10%;
+  margin-right: 12vw;
   width: 40%;
   display: flex;
   flex-direction: column;
+
 
 }
 

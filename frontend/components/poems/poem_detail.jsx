@@ -56,10 +56,6 @@ class PoemDetail extends React.Component {
     this.setState({selectionStart: start, selectionEnd: end, formDisplay: true, annoDisplay: false});
   }
 
-  // handleHeight(yOffset) {
-  //   console.log(yOffset);
-  //   this.height = yOffset;
-  // }
 
 
   render() {
