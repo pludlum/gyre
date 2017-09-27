@@ -62,9 +62,9 @@ class AnnotationForm extends React.Component {
   render() {
 
     return (
-        <div className="annotation-form-container" style={{paddingTop: this.props.height - 100}}>
+        <div className="annotation-form-container" style={{paddingTop: this.props.height + 50 }}>
           {this.renderErrors()}
-          <form id="anno-form" onSubmit={this.handleSubmit} className="session-form">
+          <form id="anno-form" onSubmit={this.handleSubmit} className="session-form anno">
             <textarea form="anno-form"
               placeholder='Share you knowledge!'
               value={this.state.username}
