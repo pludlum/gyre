@@ -4,10 +4,23 @@ User.delete_all
 Poet.delete_all
 Poem.delete_all
 Annotation.delete_all
+Vote.delete_all
 
 
 anonymous = User.new(username: "anonymous", password:  "tobeornottobe")
 anonymous.save
+
+yeats = User.new(username: "yeats", password:  "tobeornottobe")
+yeats.save
+
+shakespeare = User.new(username: "shakespeare", password:  "tobeornottobe")
+shakespeare.save
+
+dorothyparker = User.new(username: "dorothyparker", password:  "tobeornottobe")
+dorothyparker.save
+
+wilde = User.new(username: "wilde", password:  "tobeornottobe")
+wilde.save
 
 
 
@@ -13094,3 +13107,17 @@ nineth_anno.save
 tenth_anno.save
 eleventh_anno.save
 twelfth_anno.save
+
+
+def seed_votes
+  Annotation.all.each do |anno|
+    User.all.each do |user|
+      coinflip = [0, 1]
+      if coinflip.sample > 0
+        Vote.create!(annotation_id: anno.id, user_id: user.id, value: 1)
+        anno.change_rating(1)
+      end
+    end
+  end
+end
+seed_votes
