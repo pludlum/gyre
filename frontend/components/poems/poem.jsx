@@ -74,6 +74,7 @@ class Poem extends React.Component {
 
 
   // RENDER ALL POEM TEXT
+
   highlightAnnotations() {
     this.findAnnoIndexes();
 

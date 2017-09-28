@@ -29,9 +29,9 @@ class Annotation < ApplicationRecord
 
   belongs_to :user
 
-  has_many :votes
+  has_many :votes, dependent: :destroy
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   has_one :poet,
           through: :poem,

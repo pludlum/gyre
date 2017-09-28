@@ -67,7 +67,7 @@ class AnnotationForm extends React.Component {
           <form id="anno-form" onSubmit={this.handleSubmit} className="session-form anno">
             <textarea form="anno-form"
               placeholder='Share you knowledge!'
-              value={this.state.username}
+              value={this.state.body}
               onChange={this.update('body')}
               className="annotation-input" />
 

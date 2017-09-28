@@ -1,7 +1,7 @@
 export const commentPOST = (comment) => (
   $.ajax({
     method: 'POST',
-    url: `api/comment/`,
+    url: `api/comments/`,
     data: {comment: comment}
   })
 );
@@ -9,7 +9,7 @@ export const commentPOST = (comment) => (
 export const commentDELETE = (id) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/comment/${id}`
+    url: `api/comments/${id}`
   })
 );
 

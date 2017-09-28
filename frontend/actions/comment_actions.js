@@ -2,6 +2,7 @@ import { commentPOST, commentDELETE, commentINDEX } from '../util/comment_api_ut
 
 
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 export const receiveComments = (comments) => ({
@@ -14,6 +15,11 @@ export const removeComment = (comment) => ({
   comment
 });
 
+export const receiveComment = (comment) => ({
+  type: RECEIVE_COMMENT,
+  comment
+});
+
 
 export const fetchComments = (annotationId) => dispatch => {
   commentINDEX(annotationId).then(
@@ -22,14 +28,14 @@ export const fetchComments = (annotationId) => dispatch => {
 
 };
 
-export const deleteComments = id => dispatch => {
+export const deleteComment = id => dispatch => {
   commentDELETE(id).then(
     comment => dispatch(removeComment(comment))
   );
 };
 
-export const createComment = (annotationId, comment) => dispatch => {
-  commentPOST(comment).then(
-    fetchComments(annotationId)
+export const createComment = (newComment) => dispatch => {
+  commentPOST(newComment).then(
+    (comment) => dispatch(receiveComment(comment))
   );
 };

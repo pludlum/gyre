@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     resources :annotations, only: %i[show create update destroy] do
       resources :comments, only: %i[index]
     end
-    resources :votes, only: %i[create destroy]
+
+    resources :comments, only: %i[create destroy show]
     resources :votes, only: %i[create destroy]
   end
 

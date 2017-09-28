@@ -5,7 +5,8 @@ import {deleteAnnotation, removeAnnotation} from '../../actions/annotation_actio
 
 
 const mapStateToProps = (state, ownProps) => ({
-  annotation: state.currentAnno[0]
+  annotation: state.currentAnno[0],
+  currentUserId: state.session.currentUser.id
 });
 
 

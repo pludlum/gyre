@@ -1,28 +1,28 @@
 class Api::CommentsController < ApplicationController
 
   def index
-    @comments = Comment.where(annotation_id: params[:annotation_id])
+    @comments = Comment.where(annotation_id: params[:annotation_id]).includes(:user)
     render 'api/comments/index'
   end
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.user_id = current_user
-    if @comment.save
-      render JSON: @comment, status: 200
+    @comment.user_id = current_user.id
+    if @comment.save!
+      render 'api/comments/show'
     else
-      render JSON: @comment.errors.full_messages, status: 422
+      render json: ["Comment creation error"], status: 422
     end
   end
 
   def destroy
-    @comment.find(params[:id])
+    @comment = Comment.find(params[:id])
     @comment.delete
-    render JSON: @comment, status: 200
+    render json: @comment, status: 200
   end
 
   def comment_params
-    params.require(:comments).permit(:annotation_id, :body)
+    params.require(:comment).permit(:annotation_id, :body)
   end
 
 end

@@ -20,6 +20,13 @@ class AnnotationDetail extends React.Component {
   render() {
     if (this.props.annotation === undefined) return null;
 
+    let deleteButton;
+    if (this.props.annotation.user_id === this.props.currentUserId) {
+      deleteButton = <span onClick={this.handleDelete} className="delete-button"> Delete </span>;
+    } else {
+      deleteButton = <span className="delete-button">        </span>;
+    }
+
     return (
       <div className="annotation-detail-column" style={{paddingTop: this.props.height}}>
         <div className="annotation-body-container">
@@ -27,7 +34,7 @@ class AnnotationDetail extends React.Component {
           <p className="annotation-author"> - {this.props.annotation.username}</p>
           <div className="annotation-footer">
             <VoteButtonsContainer key={Date.now()} />
-            <span onClick={this.handleDelete} className="delete-button"> Delete </span>
+            {deleteButton}
           </div>
         </div>
         <div>
