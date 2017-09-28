@@ -18,16 +18,16 @@ class VoteButtons extends React.Component {
 
   handleToggleUp() {
     if (this.state.currentVote === null) {
-      let vote = this.props.votePOST({value: 1, user_id: this.props.currentUserId, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
+      this.props.votePOST({value: 1, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
 
     }
 
     if (this.state.value === 0) {
       this.setState({value: 1, rating: this.state.rating += 1});
     } else if (this.state.value === -1) {
-      this.props.voteDELETE(this.state.currentVote.id);
-      let vote = this.props.votePOST({value: 1, user_id: this.props.currentUserId, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
-      this.setState({currentVote: vote});
+      this.props.voteDELETE(this.state.currentVote.id).then( () => {
+      this.props.votePOST({value: 1, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
+    });
       this.setState({value: 1, rating: this.state.rating += 2});
     } else {
       this.props.voteDELETE(this.state.currentVote.id);
@@ -37,18 +37,16 @@ class VoteButtons extends React.Component {
   }
 
   handleToggleDown() {
-    console.log(this.state.currentVote);
     if (this.state.currentVote === null) {
-      let vote = this.props.votePOST({value: -1, user_id: this.props.currentUserId, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
-      this.setState({currentVote: vote});
+      this.props.votePOST({value: -1, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
     }
 
     if (this.state.value === 0) {
       this.setState({value: -1, rating: this.state.rating -= 1});
     } else if (this.state.value === 1) {
-      this.props.voteDELETE(this.state.currentVote.id);
-      let vote = this.props.votePOST({value: -1, user_id: this.props.currentUserId, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
-      this.setState({currentVote: vote});
+      this.props.voteDELETE(this.state.currentVote.id).then( () => {
+      this.props.votePOST({value: -1, annotation_id: this.props.annotationId}).then( (response) => this.setState({currentVote: response}));
+    });
       this.setState({value: -1, rating: this.state.rating -= 2});
     } else {
       this.props.voteDELETE(this.state.currentVote.id);
