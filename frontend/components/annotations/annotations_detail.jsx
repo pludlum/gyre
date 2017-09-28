@@ -1,5 +1,6 @@
 import React from 'react';
 import VoteButtonsContainer from '../vote_buttons/vote_buttons_container';
+import Comments from '../comments/comments_container';
 
 
 
@@ -28,6 +29,9 @@ class AnnotationDetail extends React.Component {
             <VoteButtonsContainer key={Date.now()} />
             <span onClick={this.handleDelete} className="delete-button"> Delete </span>
           </div>
+        </div>
+        <div>
+          <Comments key={Date.now()}/>
         </div>
       </div>
     );

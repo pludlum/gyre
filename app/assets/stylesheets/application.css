@@ -16,6 +16,7 @@
 
 html {
   height: 90%;
+
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   background-image: url(https://res.cloudinary.com/dzqrzline/image/upload/v1505966467/texture-2659241_1920_jmvrwl.jpg);
   height: 100%;
   min-height: 100%;
+  min-width: 800px;
 
 }
 

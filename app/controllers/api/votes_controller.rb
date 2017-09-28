@@ -16,14 +16,14 @@ class Api::VotesController < ApplicationController
   #   render "api/votes/index"
   # end
 
-  def update
-    @vote = Vote.find(params[:id])
-    if @vote && @vote.update_attributes(vote_params)
-      render json: ["Updated"], status: 200
-    else
-      render json: @vote.errors.full_messages, status: 422
-    end
-  end
+  # def update
+  #   @vote = Vote.find(params[:id])
+  #   if @vote && @vote.update_attributes(vote_params)
+  #     render json: ["Updated"], status: 200
+  #   else
+  #     render json: @vote.errors.full_messages, status: 422
+  #   end
+  # end
 
   def destroy
     @vote = Vote.find(params[:id])
