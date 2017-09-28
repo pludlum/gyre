@@ -31,6 +31,8 @@ class Annotation < ApplicationRecord
 
   has_many :votes
 
+  has_many :comments
+
   has_one :poet,
           through: :poem,
           source: :poet

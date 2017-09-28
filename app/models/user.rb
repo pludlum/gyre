@@ -22,6 +22,8 @@ class User < ApplicationRecord
 
   has_many :votes
 
+  has_many :comments
+
   # ----- Methods -------
 
   after_initialize :ensure_session_token, :ensure_avatar
