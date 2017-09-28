@@ -5,6 +5,7 @@ Poet.delete_all
 Poem.delete_all
 Annotation.delete_all
 Vote.delete_all
+Comment.delete_all
 
 
 anonymous = User.new(username: "anonymous", password:  "tobeornottobe")
@@ -19,7 +20,7 @@ shakespeare.save
 dorothyparker = User.new(username: "dorothyparker", password:  "tobeornottobe")
 dorothyparker.save
 
-wilde = User.new(username: "wilde", password:  "tobeornottobe")
+wilde = User.new(username: "oscar_wilde", password:  "tobeornottobe")
 wilde.save
 
 
@@ -12998,7 +12999,7 @@ arcturus = Poem.find_by(title: '"Arcturus" is his other name')
 
 
 first_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: divine_image.id,
   body: "A Divine Image is a poem by William Blake from Songs of Experience, not to be confused with\"The Divine Image\" from Songs of Innocence. The poem only appeared in copy BB of the combined Songs of Innocence and of Experience.",
   start_idx: 0,
@@ -13006,7 +13007,7 @@ first_anno = Annotation.new(
 )
 
 second_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: summers_day.id,
   body: "In the sonnet, the speaker asks whether or not he should compare his beloved to the summer season, and argues that he should not because the comparison does not properly express the depths of his emotion. He also states that his beloved will live on forever through the words of the poem.",
   start_idx: 0,
@@ -13014,7 +13015,7 @@ second_anno = Annotation.new(
 )
 
 third_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: success.id,
   body: "Stanzas two and three introduce military images (a captured flag, a victorious army, a dying warrior) and are dependent upon one another for complete understanding.",
   start_idx: 117,
@@ -13022,7 +13023,7 @@ third_anno = Annotation.new(
 )
 
 fourth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: tyger.id,
   body: "The first and last stanzas are identical except the word \"could\" becomes \"dare\" in the second iteration. You to begin to wonder about the tiger, and its nature, can only lead to a daring to wonder about it. Blake achieves great power through the use of alliteration (\"frame\" and \"fearful\") combined with imagery (burning, fire, eyes), and he structures the poem to ring with incessant repetitive questioning, demanding of the creature, \"Who made thee?\"",
   start_idx: 0,
@@ -13030,7 +13031,7 @@ fourth_anno = Annotation.new(
 )
 
 fifth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: tyger.id,
   body: "\"The Tyger\" is the sister poem to \"The Lamb\" (from \"Songs of Innocence\"), a reflection of similar ideas from a different perspective (Blake's concept of \"contraries\"), with \"The Lamb\" bringing attention to innocence. \"The Tyger\" presents a duality between aesthetic beauty and primal ferocity, and Blake believes that to see one, the hand that created \"The Lamb\", one must also see the other, the hand that created \"The Tyger\”: \"Did he who made the Lamb make thee?\"",
   start_idx: 624,
@@ -13038,7 +13039,7 @@ fifth_anno = Annotation.new(
 )
 
 sixth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: success.id,
   body: "The poem's three unemotional quatrains are written in iambic trimeter with only line 5 in iambic tetrameter. Lines 1 and 3 (and others) end with extra syllables. The rhyme scheme is abcb. The poem's \"success\" theme is treated paradoxically: only those who know defeat can truly appreciate success. Alliteration enhances the poem's lyricism.",
   start_idx: 0,
@@ -13046,7 +13047,7 @@ sixth_anno = Annotation.new(
 )
 
 seventh_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: sonnet130.id,
   body: "Sonnet 130 satirizes the concept of ideal beauty that was a convention of literature and art in general during the Elizabethan era. Influences originating with the poetry of ancient Greece and Rome had established a tradition of this, which continued in Europe's customs of courtly love and in courtly poetry, and the work of poets such as Petrarch.",
   start_idx: 0,
@@ -13054,7 +13055,7 @@ seventh_anno = Annotation.new(
 )
 
 eighth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: sonnet130.id,
   body: "By indicating that his mistress is the ideal object of his affections because of her genuine qualities, and that she is more worthy of his love than the paramours of other poets who are more fanciful.",
   start_idx: 477,
@@ -13062,7 +13063,7 @@ eighth_anno = Annotation.new(
 )
 
 nineth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: dream.id,
   body: "The poem dramatizes a confusion in watching the important things in life slip away. Realizing he cannot hold on to even one grain of sand leads to his final question that all things are a dream.",
   start_idx: 276,
@@ -13070,7 +13071,7 @@ nineth_anno = Annotation.new(
 )
 
 tenth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: dream.id,
   body: "It is opined that the \"golden sand\" referenced in the 15th line signifies that which is to be found in an hourglass, consequently time itself.",
   start_idx: 357,
@@ -13078,7 +13079,7 @@ tenth_anno = Annotation.new(
 )
 
 eleventh_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: butterfly.id,
   body: "Note the internal rhyme in this short and mysterious poem.",
   start_idx: 0,
@@ -13086,7 +13087,7 @@ eleventh_anno = Annotation.new(
 )
 
 twelfth_anno = Annotation.new(
-  user_id: anonymous.id,
+  user_id: wilde.id,
   poem_id: arcturus.id,
   body: "Arcturus is the brightest star in the constellation of Boötes, the fourth-brightest in the night sky, and the brightest in the northern celestial hemisphere.",
   start_idx: 1,
@@ -13109,15 +13110,20 @@ eleventh_anno.save
 twelfth_anno.save
 
 
-def seed_votes
+def seed_votes_comments
   Annotation.all.each do |anno|
     User.all.each do |user|
-      coinflip = [0, 1]
-      if coinflip.sample > 0
+      coinflip = [0, 1, 2, 4]
+      comments = ["Interesting!", "I want to know more!", "This was very informative", "Please tell us more!", "Thank you!"]
+      flip = coinflip.sample
+      if flip > 1
         Vote.create!(annotation_id: anno.id, user_id: user.id, value: 1)
         anno.change_rating(1)
+      end
+      if flip > 3
+        Comment.create!(annotation_id: anno.id, user_id: user.id, body: comments.sample)
       end
     end
   end
 end
-seed_votes
+seed_votes_comments
