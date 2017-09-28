@@ -75,6 +75,9 @@ class AnnotationForm extends React.Component {
                 className="session-form-button annotation"
                 value={this.props.formType + " Annotation"} />
             </form>
+            <button onClick={this.props.cancelForm}
+              className="session-form-button annotation"
+              >Cancel</button>
         </div>
 
     );

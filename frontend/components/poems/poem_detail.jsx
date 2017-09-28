@@ -9,23 +9,26 @@ class PoemDetail extends React.Component {
     super(props);
 
     this.state = {
+      annotations: this.props.annotations,
       selectionStart: null,
       selectionEnd: null,
       formDisplay: false,
       annoDisplay: false,
+      annoButton: false,
+      selectionOK: true,
       update: ""
     };
 
     this.handleSelection = this.handleSelection.bind(this);
     this.update = this.update.bind(this);
     this.findHeight = this.findHeight.bind(this);
+    this.startAnnotation = this.startAnnotation.bind(this);
+    this.cancelForm = this.cancelForm.bind(this);
   }
 
 
   componentDidMount() {
-
     this.props.removeAnnotation();
-
     this.props.fetchPoet(this.props.poetId);
     this.props.fetchPoem(this.props.poemId);
     this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
@@ -33,10 +36,12 @@ class PoemDetail extends React.Component {
 
 
   componentWillReceiveProps(nextProps) {
-    this.setState({update: this.state.update + 1});
+    if (nextProps !== this.props) {
+      this.setState({annotations: nextProps.annotations});
+    }
 
     if (nextProps.currentAnno.length > 0 ) {
-      this.setState({annoDisplay: true, formDisplay: false});
+      this.setState({annoDisplay: true, formDisplay: false, annoButton: false});
     } else {
       this.setState({annoDisplay: false});
     }
@@ -52,18 +57,32 @@ class PoemDetail extends React.Component {
   }
 
   handleSelection(start, end) {
-    this.setState({selectionStart: start, selectionEnd: end, formDisplay: true, annoDisplay: false});
+    if (this.state.selectionOK) {
+      this.setState({selectionStart: start, selectionEnd: end, annoButton: true, annoDisplay: false});
+    }
+  }
+
+  startAnnotation(e) {
+    e.preventDefault();
+    this.props.annotations.push({start_idx: this.state.selectionStart,
+                                end_idx: this.state.selectionEnd,
+                                id: -1});
+    this.setState({annoButton: false, formDisplay: true, selectionOK: false});
+
+  }
+
+  cancelForm() {
+    this.setState({formDisplay: false, selectionOK: true});
+    this.props.fetchAnnotations(this.props.poetId, this.props.poemId);
   }
 
 
 
   render() {
-
     if (this.props.poem === undefined || this.props.poet === undefined) return null;
 
     let nameArray = this.props.poet.name.split(' ');
     let lastName = nameArray[nameArray.length-1];
-
     let annotationSpace = null;
 
 
@@ -78,8 +97,14 @@ class PoemDetail extends React.Component {
                                                  poetId={this.props.poetId}
                                                  update={this.update}
                                                  yOffset={this.yOffset}
-                                                 height={this.height} />;
-    }
+                                                 height={this.height}
+                                                 cancelForm = {this.cancelForm}/>;
+   } else if (this.state.annoButton) {
+     annotationSpace = <button className="start-anno-button"
+                               onClick={this.startAnnotation}
+                               style={{marginTop: this.height + 140 }}
+                               >Start Annotation</button>;
+   }
 
     return (
       <div className="poet_detail_container" >
@@ -104,7 +129,7 @@ class PoemDetail extends React.Component {
             <h3 className="poet-name poem">{this.props.poem.title}</h3>
             <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
             <Poem poemBody={this.props.poem.body}
-                  annotations= {this.props.annotations}
+                  annotations= {this.state.annotations}
                   fetchAnnotation={this.props.fetchAnnotation}
                   handleSelection={this.handleSelection}
                   update={this.update} />
