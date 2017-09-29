@@ -19,16 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
-
-  window.dispatch = store.dispatch;
-
   ReactDOM.render(<Root store={store} />, root);
 });
-
-window.annosGET = annoAPIUtil.annosGET;
-
-window.fetchAnnotations = annoActions.fetchAnnotations;
-window.fetchAnnotation = annoActions.fetchAnnotation;
-window.createAnnotation = annoActions.createAnnotation;
-window.destroyAnnotation = annoActions.destroyAnnotation;
-window.updateAnnotation = annoActions.updateAnnotation;

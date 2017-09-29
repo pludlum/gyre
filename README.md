@@ -6,6 +6,7 @@
 
 
 ## Table of Contents
+- [Features](#Features)
 
 ## Features
 
@@ -13,13 +14,17 @@
 
 ## Challenges Encountered
 
-####
+#### Rendering Highlights
 
+#### User Workflow
+
+#### Passing the Y-offset to Annotations
 
 ## Planned features
 - [x] Search
 - [ ] Tags
 - [ ] Embedded Video
-- [ ] (Queneau's 100,000,000,000 Sonnets generator)[http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html]
+- [ ] Queneau's 100,000,000,000 Sonnets generator
+  - http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
 
 ## Credits
