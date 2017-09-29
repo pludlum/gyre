@@ -16,11 +16,9 @@ class TopPoemIndex extends React.Component {
     if (this.props.topPoems.length === 0) {
       return null;
     }
-    console.log(this.props);
 
     let poemItemList = this.props.topPoems.map( poem => {
       if (this.props.author && this.props.author === poem.author) {
-        console.log(poem.author);
         return <TopPoemItem key={`poem-item-${poem.id}`} poem={poem} />;
       } else if (this.props.author === undefined) {
         return <TopPoemItem key={`poem-item-${poem.id}`} poem={poem} />;

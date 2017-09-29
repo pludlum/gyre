@@ -10,7 +10,6 @@ class CommentItem extends React.Component {
 
   handleDelete(e) {
     e.preventDefault;
-    console.log(this.props.deleteComment);
     this.props.deleteComment(this.props.comment.id);
   }
 

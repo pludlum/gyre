@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 
     if (this.props.results.length > 0) {
       resultItems = this.props.results.map( (result) => (
-        <SearchItem poem={result} />
+        <SearchItem key={`result + ${result.id}`} poem={result} />
       ));
     } else {
       itemListHidden = "hidden";

@@ -134,8 +134,6 @@ class Poem extends React.Component {
 
 
   render() {
-    console.log(this.state.selectionStart);
-    console.log(this.state.selectionEnd);
 
     if (this.props.poemBody === undefined) return null;
 

@@ -16,7 +16,6 @@ class PoemIndex extends React.Component {
     if (this.props.poems.length === 0) {
       return null;
     }
-    console.log(this.props.poems);
 
     let poemItemList = this.props.poems.map( poem => (
       <PoemItem key={`poem-item-${poem.id}`} poem={poem} />
