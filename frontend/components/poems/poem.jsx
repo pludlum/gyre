@@ -12,7 +12,6 @@ class Poem extends React.Component {
 
     this.displayAnnotation = this.displayAnnotation.bind(this);
     this.grabSelection = this.grabSelection.bind(this);
-
   }
 
 
@@ -61,7 +60,6 @@ class Poem extends React.Component {
 
       start += spanLength;
       end += spanLength;
-
     }
 
 

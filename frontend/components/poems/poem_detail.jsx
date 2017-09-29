@@ -41,7 +41,7 @@ class PoemDetail extends React.Component {
     }
 
     if (nextProps.currentAnno.length > 0 ) {
-      this.setState({annoDisplay: true, formDisplay: false, annoButton: false});
+      this.setState({annoDisplay: true, formDisplay: false, annoButton: false, selectionOK: true});
     } else {
       this.setState({annoDisplay: false});
     }
@@ -100,7 +100,7 @@ class PoemDetail extends React.Component {
                                                  height={this.height}
                                                  cancelForm = {this.cancelForm}/>;
    } else if (this.state.annoButton) {
-     annotationSpace = <button className="start-anno-button"
+     annotationSpace = <button className="session-form-button start-anno"
                                onClick={this.startAnnotation}
                                style={{marginTop: this.height + 140 }}
                                >Start Annotation</button>;
@@ -125,14 +125,16 @@ class PoemDetail extends React.Component {
         </div>
 
         <div className="poem-show-body-container ">
-          <div className="poet-description-container poem" onClick={this.findHeight}>
+          <div className="poet-description-container poem">
             <h3 className="poet-name poem">{this.props.poem.title}</h3>
             <h2 className="poet-name poem author">by {this.props.poem.author}</h2>
-            <Poem poemBody={this.props.poem.body}
-                  annotations= {this.state.annotations}
-                  fetchAnnotation={this.props.fetchAnnotation}
-                  handleSelection={this.handleSelection}
-                  update={this.update} />
+            <div onClick={this.findHeight}>
+              <Poem poemBody={this. props.poem.body}
+                    annotations= {this.state.annotations}
+                    fetchAnnotation={this.props.fetchAnnotation}
+                    handleSelection={this.handleSelection}
+                    update={this.update} />
+            </div>
           </div>
           <div className="annotation-column">
             <div className="annotation-container">
