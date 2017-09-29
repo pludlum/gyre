@@ -54,6 +54,7 @@
   align-items: center;
   width: 33%;
   margin-right: 3%;
+
 }
 
 .nav-bar.right.out {
@@ -69,6 +70,7 @@
 .avatar-animation-container {
   height: 70px;
   width: 70px;
+
 
   display: flex;
   justify-content: center;
