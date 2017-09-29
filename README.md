@@ -1,4 +1,23 @@
-# README
+![](https://res.cloudinary.com/dzqrzline/image/upload/v1506715559/gyrelogo_zxvpo4.gif)
+
+# Gyre
+Gyre is a poetry-focused attempt at cloning the annotation functionality
+ of the lyrics site Genius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
