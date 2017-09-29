@@ -25,9 +25,9 @@ class PoemIndex extends React.Component {
     return (
       <div className="poem-index-component">
         <div className="poem-index-title-box">
-          <span className="poem-index-title">Notable Poems</span>
+          <span className="poem-index-title">All Poems</span>
         </div>
-        <span className="divider" ></span>
+        <span className="divider poem-index" ></span>
         <div className="poem-index-box">
           <ul className="poem-index-list">
             {poemItemList}

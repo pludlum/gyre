@@ -35,7 +35,7 @@
 
 .nav-bar.left {
   width: 33%;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 
 .nav-bar.center {
@@ -65,6 +65,12 @@
   align-items: flex-end;
   width: 33%;
   margin-right: 3%;
+}
+
+.session-link-container {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
 .avatar-animation-container {
@@ -124,16 +130,18 @@
 
 
 .session-link-button {
-  width: 30%;
+
   font-family: 'Muli', sans-serif;
-  font-weight: bold;
+
   color: black;
   text-decoration: none;
+  border-bottom: solid 1px black;
+  padding-bottom: 2px;
 
 }
 
 .session-link-button:hover {
-
+  font-weight: bold;
 }
 
 .sesssion-sign-out-button {

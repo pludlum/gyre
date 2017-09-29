@@ -1,9 +1,10 @@
 import React from 'react';
-import PoetItem from './poet_index_item';
+import PoetItem from '../poets/poet_index_item';
 import TopPoemIndexContainer from '../poems/top_poem_container';
+import { Link } from 'react-router-dom';
 
 
-class PoetIndex extends React.Component {
+class Homepage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,25 +14,29 @@ class PoetIndex extends React.Component {
   }
 
   render () {
-    let poet_item_list = this.props.poets.map( poet => (
+    let poetItemList = this.props.poets.map( poet => (
       <PoetItem key={`poet-item-${poet.id}`} poet={poet} />
     ));
 
     return (
       <div className="poet-index-component">
         <div className="poet-index-title-box">
-          <span className="poet-index-title">All Poets</span>
+          <span className="poet-index-title">Popular Poets</span>
         </div>
         <span className="divider" ></span>
         <div className="poet-index-box">
           <ul className="poet-index-list">
-            {poet_item_list}
+            {poetItemList.slice(0,3)}
           </ul>
         </div>
+        <Link to="/poets" className="session-link-button poets" >
+          <span >Browse All Poets</span>
+        </Link>
+        <TopPoemIndexContainer />
       </div>
     );
   }
 }
 
 
-export default PoetIndex;
+export default Homepage;

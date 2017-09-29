@@ -2,7 +2,7 @@
 /* --- Poet index containers ---- */
 
 .poet-index-component {
-  padding-top: 90px;
+  padding-top: 60px;
   width: 100%;
   background-color: white;
 
@@ -100,7 +100,16 @@
   color: black;
 
   width: 60%;
-  margin-top: 20px;
+  margin-top: 15px;
   border-bottom: solid 1px;
   margin-bottom: 10px;
+}
+
+.session-link-button.poets {
+  font-size: 20px;
+
+  margin: auto;
+  margin-left: 42%;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }

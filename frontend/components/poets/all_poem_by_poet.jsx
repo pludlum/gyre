@@ -1,11 +1,10 @@
 import React from 'react';
-import TopPoemIndexContainer from '../poems/top_poem_container';
+import PoemIndexContainer from '../poems/poem_index_container';
 import { Link } from 'react-router-dom';
 
-class PoetDetail extends React.Component {
+class allPoems extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -36,17 +35,7 @@ class PoetDetail extends React.Component {
           <p className="banner-name">{lastName}</p>
         </div>
 
-        <div className="poet-description-container">
-          <h3 className="poet-name">{this.props.poet.name}</h3>
-          <p className="poet-description" >{this.props.poet.description}</p>
-          <div className="poems-index-link-container">
-            <Link to={`/poets/${this.props.poet.id}/poems`} className="session-link-button" >
-              <span >Browse All Poems</span>
-            </Link>
-          </div>
-        </div>
-
-        <TopPoemIndexContainer poetId={this.props.poetId} author={this.props.poet.name} />
+        <PoemIndexContainer poetId={this.props.poetId} />
 
       </div>
     );
@@ -56,4 +45,4 @@ class PoetDetail extends React.Component {
 
 
 
-export default PoetDetail;
+export default allPoems;

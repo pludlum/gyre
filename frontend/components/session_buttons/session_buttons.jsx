@@ -12,12 +12,14 @@ const signedOutButtons = (clearErrors) => (
       <TitleSmall />
     </div>
     <div className="nav-bar right out">
-      <Link className="session-link-button" onClick={clearErrors} to="/login">
-          Sign In
-      </Link>
-      <Link className="session-link-button" onClick={clearErrors} to="/signup">
-          Sign Up
-      </Link>
+      <div className="session-link-container">
+        <Link className="session-link-button" onClick={clearErrors} to="/login">
+            Sign In
+        </Link>
+        <Link className="session-link-button" onClick={clearErrors} to="/signup">
+            Sign Up
+        </Link>
+      </div>
     </div>
   </nav>
 );

@@ -14,10 +14,10 @@
 
 .poem-index-title {
   font-family: 'Muli', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 65px;
 
-  padding-bottom: 5%;
+
+
 }
 
 // already defined home stylesheet --- refactor needed
@@ -34,4 +34,8 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
+}
+
+.divider.poem-index {
+  width: 80%;
 }
