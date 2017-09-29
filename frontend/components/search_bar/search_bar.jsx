@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
           value={this.state.input}
           placeholder="Search all poems"
           onChange={this.updateField}></input>
-        <ul className={`results-list ${itemListHidden}`}>
+        <ul className={`results-list ${itemListHidden}`} onClick={this.props.clearResults} >
           {resultItems}
         </ul>
       </div>
