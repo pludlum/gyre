@@ -4,7 +4,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import PoetIndexContainer from './poets/poets_index_container';
 import PoetDetailContainer from './poets/poet_detail_container';
 import PoemDetailContainer from './poems/poem_detail_container';
-import AuthRoute from '../util/route_util';
+import {AuthRoute, ProtectRoute} from '../util/route_util';
 
 
 import {
@@ -28,11 +28,11 @@ const App = () => (
 
     <div className="component-container">
       <Switch>
-        <Route exact path="/" component={PoetIndexContainer} />
+        <ProtectRoute exact path="/" component={PoetIndexContainer} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <Route exact path="/poets/:poetId" component={PoetDetailContainer} key={`${Date.now()}`} />
-        <Route path="/poets/:poetId/poems/:poemId" component={PoemDetailContainer} key={`${Date.now()}`} />
+        <ProtectRoute exact path="/poets/:poetId" component={PoetDetailContainer} key={`${Date.now()}`} />
+        <ProtectRoute path="/poets/:poetId/poems/:poemId" component={PoemDetailContainer} key={`${Date.now()}`} />
       </Switch>
     </div>
 

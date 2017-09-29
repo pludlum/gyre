@@ -102,7 +102,7 @@ class PoemDetail extends React.Component {
    } else if (this.state.annoButton) {
      annotationSpace = <button className="session-form-button start-anno"
                                onClick={this.startAnnotation}
-                               style={{marginTop: this.height + 140 }}
+                               style={{marginTop: this.height + 145 }}
                                >Start Annotation</button>;
    }
 
