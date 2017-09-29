@@ -1,5 +1,11 @@
 class Api::PoemsController < ApplicationController
 
+  def search
+    @poems = Poem.all.where("title ILIKE ? ", "%#{params[:query]}%").limit(10)
+    render 'api/poems/search_index'
+  end
+
+
   def top_index
     @poems = Poem.joins(:annotations).group("poems.id").order("count(annotations.id) DESC")
     render 'api/poems/index'

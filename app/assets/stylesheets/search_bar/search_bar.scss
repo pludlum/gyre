@@ -1,0 +1,62 @@
+.search-bar-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  z-index: 9999;
+
+  padding-left: 20px;
+
+}
+
+.search-bar {
+  font-family: 'futura' sans-serif;
+  font-size: 15px;
+  height: 20px;
+  margin-bottom: 10px;
+
+  border: 1px solid grey;
+}
+
+.search-bar:focus {
+ outline: none;
+}
+
+.results-list {
+  overflow: visible;
+  height: 100%;
+  border: solid 1px grey;
+
+  max-height: 400px;
+  overflow-y: scroll;
+
+}
+
+.results-list.hidden {
+  overflow: visible;
+  height: 100%;
+  border: none;
+}
+
+.poem-index-item.search {
+  height: 100%;
+  background-color: white;
+
+}
+
+.poem-item-link.search {
+  font-size: 12px;
+
+}
+
+.poem-item-container.search {
+
+}
+
+.poem-item-span.search {
+
+}
+
+.poem-item-author.search {
+
+}

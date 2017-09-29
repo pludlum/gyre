@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :comments, only: %i[create destroy show]
     resources :votes, only: %i[create destroy]
   end
-
+  get 'api/poems/search/:query', defaults: { format: :json }, to: 'api/poems#search'
   get 'api/top_poems', defaults: { format: :json }, to: 'api/poems#top_index'
 
 end

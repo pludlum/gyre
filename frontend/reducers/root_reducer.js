@@ -7,6 +7,7 @@ import AnnotationsReducer from './annotations_reducer.js';
 import TopPoemReducer from './top_poem_reducer';
 import CurrentAnnoReducer from './current_anno_reducer';
 import CommentReducer from './comments_reducer';
+import SearchReducer from './search_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -16,7 +17,8 @@ const RootReducer = combineReducers({
   topPoems: TopPoemReducer,
   annotations: AnnotationsReducer,
   currentAnno: CurrentAnnoReducer,
-  comments: CommentReducer
+  comments: CommentReducer,
+  search: SearchReducer
 });
 
 export default RootReducer;

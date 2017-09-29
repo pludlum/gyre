@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 
 const TopPoemItem = ({poem}) => {
+  // let poemTitle;
+  // if (poem.title.length > 35) {
+  //   poemTitle = poem.title.slice(0,32) + '...';
+  // } else {
+  //   poemTitle = poem.title;
+  // }
 
   return (
   <li className="poem-index-item">

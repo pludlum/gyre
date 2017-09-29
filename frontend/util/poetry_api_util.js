@@ -33,3 +33,10 @@ export const topPoemsGET = () => (
     url: `api/top_poems`
   })
 );
+
+export const poemsSEARCH = (query) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/poems/search/${query}`
+  })
+);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TitleSmall from '../title/title_small';
+import SearchBarContainer from '../search_bar/search_bar_container';
 
 
 
@@ -23,7 +24,9 @@ const signedOutButtons = (clearErrors) => (
 
 const signedIn = (currentUser, sessionDELETE) => (
   <nav className="signup-signin-nav">
-    <div className="nav-bar left"></div>
+    <div className="nav-bar left">
+      <SearchBarContainer />
+    </div>
 
     <div className="nav-bar center">
       <TitleSmall />
