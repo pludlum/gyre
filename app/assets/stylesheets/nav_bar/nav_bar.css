@@ -162,3 +162,11 @@
 .sesssion-sign-out-button:focus {
   outline: none;
 }
+
+.current-user {
+  font-family: 'Muli', sans-serif;
+
+  color: white;
+  font-size: 1.4vw;
+  padding-right: 20px;
+}

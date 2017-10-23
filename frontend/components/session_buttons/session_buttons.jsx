@@ -35,14 +35,10 @@ const signedIn = (currentUser, sessionDELETE) => (
     </div>
 
     <div className="nav-bar right">
-      <div className="avatar-animation-container">
-        <div className="avatar-container">
-          <button className="sesssion-sign-out-button"
-          onClick={sessionDELETE}>
-            <img className="avatar" src={currentUser.img_url} title="Sign Out"></img>
-          </button>
-        </div>
-      </div>
+      <span className="current-user">{currentUser.username}</span>
+      <Link className="session-link-button nav-bar-link" onClick={sessionDELETE} to="/signup">
+          Sign Out
+      </Link>
     </div>
   </nav>
 );
