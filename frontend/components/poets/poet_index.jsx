@@ -28,6 +28,7 @@ class PoetIndex extends React.Component {
             {poet_item_list}
           </ul>
         </div>
+        <TopPoemIndexContainer />
       </div>
     );
   }
