@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as annoAPIUtil from './util/annotations_api_util';
-import * as annoActions from './actions/annotation_actions.js';
+import {clearResults} from './actions/search_actions.js';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,5 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
+
+  document.addEventListener("click", () => {
+    store.dispatch(clearResults());
+  });
+
   ReactDOM.render(<Root store={store} />, root);
 });
