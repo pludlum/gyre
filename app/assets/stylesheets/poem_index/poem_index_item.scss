@@ -27,6 +27,21 @@ display: block;
   padding-right: 20px;
 }
 
+.leftside {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.poem-title-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 30vw;
+}
+
+.rightside {
+
+}
+
 
 .poem-item-span {
   padding-right: 20px;

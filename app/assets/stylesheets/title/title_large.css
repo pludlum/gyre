@@ -4,7 +4,8 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 600px;
-  padding-right: 8%
+  padding-right: 8%;
+  z-index: 900;
 }
 
 .gyre-container {

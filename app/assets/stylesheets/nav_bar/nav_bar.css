@@ -3,12 +3,12 @@
 /* Session Nav */
 
 .nav-header {
-  height: 95px;
+  height: 70px;
   z-index: 10;
-  background-color: white;
+  /*background-color: white;*/
 
 
-  overflow: visible;
+  overflow: hidden;
 }
 
 .signup-signin-nav {
@@ -21,7 +21,7 @@
   border-bottom-style: solid;
   border-bottom-width: thin;*/
 
-  height: 95px;
+  height: 70px;
   font-family: 'Muli', sans-serif;
 
 
@@ -127,8 +127,6 @@
 }
 
 
-
-
 .session-link-button {
 
   font-family: 'Muli', sans-serif;
@@ -140,13 +138,25 @@
 
 }
 
+.session-link-button.nav-bar-link {
+
+  font-family: 'Muli', sans-serif;
+
+  color: white;
+  text-decoration: none;
+  border-bottom: solid 1px white;
+  padding-bottom: 2px;
+
+}
+
+
 .session-link-button:hover {
   font-weight: bold;
 }
 
 .sesssion-sign-out-button {
   border: none;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(35, 35, 35, 1);;
 }
 
 .sesssion-sign-out-button:focus {

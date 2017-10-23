@@ -88,8 +88,19 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className= "session-page">
-        <Title />
+      <div className="session-page">
+        <img className="splash-page-img" src="https://res.cloudinary.com/dzqrzline/image/upload/v1508697049/old-books-436498_1920_ndxm1d.jpg" />
+        <div className="session-page-text">
+          <span className="session-text line-1">
+            Welcome to the Gyre.
+          </span>
+          <span className="session-text line-2">
+            Browse and annotate poetry.
+          </span>
+          <span className="session-text line-3">
+            Learn and share your knowledge with the world.
+          </span>
+        </div>
         <div className="session-form-container">
           {this.renderErrors()}
           <form onSubmit={this.handleSubmit} className="session-form">

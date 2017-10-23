@@ -13,10 +13,10 @@ const signedOutButtons = (clearErrors) => (
     </div>
     <div className="nav-bar right out">
       <div className="session-link-container">
-        <Link className="session-link-button" onClick={clearErrors} to="/login">
+        <Link className="session-link-button nav-bar-link" onClick={clearErrors} to="/login">
             Sign In
         </Link>
-        <Link className="session-link-button" onClick={clearErrors} to="/signup">
+        <Link className="session-link-button nav-bar-link" onClick={clearErrors} to="/signup">
             Sign Up
         </Link>
       </div>

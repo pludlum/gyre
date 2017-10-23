@@ -91,6 +91,13 @@
   z-index: 55;
 }
 
+.poet-portrait-frame.smaller {
+  position: absolute;
+  height: 3.7vw;
+  width: 3.7vw;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0);
+}
+
 .poet-portait {
   width: 108%;
 }

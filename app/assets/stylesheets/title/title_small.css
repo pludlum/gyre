@@ -1,12 +1,12 @@
 .title-container.small {
   height: 100%;
-  width: 250px;
+  width: 190px;
   justify-content: center;
   align-content: center;
 }
 
 .gyre-container.small {
-  width: 65%;
+  width: 58%;
 }
 
 .title-link {
@@ -19,19 +19,21 @@
 }
 
 .title.small {
-  font-size: 60px;
+  font-size: 40px;
   padding-top: 5px;
-  width: 18%
+  width: 18%;
+  color: white;
 }
 
 
 
 .notAwesome.small {
-  font-size: 40px;
+  font-size: 30px;
   width: 5%;
+  color: white;
 }
 
 .first.small {
   width: 22%;
-  padding-right: 12px;
+  padding-right: 8px;
 }
