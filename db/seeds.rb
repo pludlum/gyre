@@ -15137,17 +15137,30 @@ twelfth_anno.save
 
 
 def seed_votes_comments
+  comments = ["Interesting!",
+    "I want to know more!",
+    "This was very informative",
+    "Please tell us more!",
+    "Thank you!",
+    "Could you elaborate on this?",
+    "I believe there is more to this poem than you have mentioned",
+    "It's such a beautiful sentiment",
+    "If only I could write like this.",
+    "That's why this poem is my favorite!",
+    "This is accurate as far as I can tell...",
+    "I wish I knew as much as you do!",
+    "Thanks for sharing!",
+    "I never knew this!"]
   Annotation.all.each do |anno|
     User.all.each do |user|
       coinflip = [0, 1, 2, 4]
-      comments = ["Interesting!", "I want to know more!", "This was very informative", "Please tell us more!", "Thank you!"]
       flip = coinflip.sample
       if flip > 1
         Vote.create!(annotation_id: anno.id, user_id: user.id, value: 1)
         anno.change_rating(1)
       end
-      if flip > 3
-        Comment.create!(annotation_id: anno.id, user_id: user.id, body: comments.sample)
+      if flip > 3 && comments.length > 0
+        Comment.create!(annotation_id: anno.id, user_id: user.id, body: comments.pop)
       end
     end
   end
