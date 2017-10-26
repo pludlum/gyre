@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import SearchItem from './search_item';
 
 
@@ -9,7 +10,8 @@ class SearchBar extends React.Component {
       input: ""
     };
     this.updateField = this.updateField.bind(this);
-    this.clearResultsOnDelay = this.clearResultsOnDelay.bind(this)
+    this.clearResultsOnDelay = this.clearResultsOnDelay.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -25,6 +27,13 @@ class SearchBar extends React.Component {
 
   clearResultsOnDelay() {
     setTimeout(this.props.clearResults, 100);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let poem = this.props.results[0]
+    this.props.history.push(`/poets/${poem.author_id}/poems/${poem.id}`);
+    this.props.clearResults();
   }
 
   render() {
@@ -43,13 +52,16 @@ class SearchBar extends React.Component {
 
     return (
       <div className="search-bar-container">
-        <input type='text'
-          className="search-bar"
-          value={this.state.input}
-          placeholder="Search all poems"
-          onChange={this.updateField}
-          onBlur={this.clearResultsOnDelay}></input>
-        <ul className={`results-list ${itemListHidden}`} onClick={this.props.clearResults} >
+        <form onSubmit={this.handleSubmit} className="search-bar-form">
+          <input type="text"
+            className="search-bar"
+            value={this.state.input}
+            placeholder="Search all poems"
+            onChange={this.updateField}
+            onBlur={this.clearResultsOnDelay}/>
+        </form>
+        <ul className={`results-list ${itemListHidden}`}
+            onClick={this.props.clearResults} >
           {resultItems}
         </ul>
       </div>
