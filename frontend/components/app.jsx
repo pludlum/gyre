@@ -17,9 +17,6 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-
-
-
 const App = () => (
   <div className="app">
     <div className="nav-bar-div">

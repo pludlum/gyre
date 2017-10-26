@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+
+  ReactDOM.render(<Root store={store} />, root);
+
   // root.addEventListener("click", () => {
   //   store.dispatch(clearResults());
   // });
-
-  ReactDOM.render(<Root store={store} />, root);
 });

@@ -9,7 +9,9 @@ class SearchBar extends React.Component {
       input: ""
     };
     this.updateField = this.updateField.bind(this);
+    this.clearResultsOnDelay = this.clearResultsOnDelay.bind(this)
   }
+
 
   updateField(e) {
     let currentValue = e.currentTarget.value;
@@ -19,6 +21,10 @@ class SearchBar extends React.Component {
     } else {
       this.props.clearResults();
     }
+  }
+
+  clearResultsOnDelay() {
+    setTimeout(this.props.clearResults, 100);
   }
 
   render() {
@@ -35,14 +41,14 @@ class SearchBar extends React.Component {
     }
 
 
-
     return (
       <div className="search-bar-container">
         <input type='text'
           className="search-bar"
           value={this.state.input}
           placeholder="Search all poems"
-          onChange={this.updateField}></input>
+          onChange={this.updateField}
+          onBlur={this.clearResultsOnDelay}></input>
         <ul className={`results-list ${itemListHidden}`} onClick={this.props.clearResults} >
           {resultItems}
         </ul>
