@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
   }
 
   clearResultsOnDelay() {
-    setTimeout(this.props.clearResults, 100);
+    setTimeout(this.props.clearResults, 200);
   }
 
   handleSubmit(e) {
