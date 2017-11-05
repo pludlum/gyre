@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let poem = this.props.results[0]
+    let poem = this.props.results[0];
     this.props.history.push(`/poets/${poem.author_id}/poems/${poem.id}`);
     this.props.clearResults();
   }

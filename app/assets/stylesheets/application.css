@@ -53,7 +53,6 @@ body {
 
 }
 
-/*  DOES NOT WORK YET  */
 
 .component-container > * {
   height: 100%;
@@ -66,7 +65,6 @@ body {
 }
 
 
-/*  RESEARCH SCROLL BAR TRICKS  */
 
 .component-container::-webkit-scrollbar {
   width: 12px;
