@@ -39,6 +39,7 @@ class SessionForm extends React.Component {
     demoPassword.forEach((l, i) => setTimeout( () => {
       self.setState({password: self.state.password + l
       });
+
     }, 70 * i));
 
     setTimeout( () => {this.props.sessionPOST({
